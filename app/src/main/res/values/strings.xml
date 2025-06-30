@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">HireEasy</string>
+    <string name="splash_image_description">Splash screen image</string>
 </resources>
