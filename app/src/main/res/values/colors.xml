@@ -202,4 +202,56 @@
     <color name="white">#FFFFFF</color>
     <color name="green">#008000</color>
 
+    <!-- BLACK Shades -->
+    <color name="black_100">#000000</color>
+    <color name="black_90">#1A1A1A</color>
+    <color name="black_80">#333333</color>
+    <color name="black_70">#4D4D4D</color>
+    <color name="black_60">#666666</color>
+    <color name="black_50">#808080</color>
+
+    <!-- GOLDEN Shades -->
+    <color name="gold_100">#FFD700</color>
+    <color name="gold_90">#F5C400</color>
+    <color name="gold_80">#E6B800</color>
+    <color name="gold_70">#D4AA00</color>
+    <color name="gold_60">#C2A200</color>
+    <color name="gold_50">#B58900</color>
+
+    <!-- RED Shades -->
+    <color name="red_90">#E53935</color>
+    <color name="red_80">#D32F2F</color>
+    <color name="red_70">#C62828</color>
+    <color name="red_60">#B71C1C</color>
+
+    <!-- BLUE Shades -->
+    <color name="blue_90">#1E88E5</color>
+    <color name="blue_80">#1976D2</color>
+    <color name="blue_70">#1565C0</color>
+    <color name="blue_60">#0D47A1</color>
+
+    <!-- BROWN Shades -->
+    <color name="brown_90">#7B3F00</color>
+    <color name="brown_80">#6D3600</color>
+    <color name="brown_70">#5D2C00</color>
+    <color name="brown_60">#4E2400</color>
+
+    <!-- GREEN Shades -->
+    <color name="green_90">#43A047</color>
+    <color name="green_80">#388E3C</color>
+    <color name="green_70">#2E7D32</color>
+    <color name="green_60">#1B5E20</color>
+
+    <!-- WHITE Shades -->
+    <color name="white_100">#FFFFFF</color>
+    <color name="white_90">#F5F5F5</color>
+    <color name="white_80">#EEEEEE</color>
+    <color name="white_70">#E0E0E0</color>
+    <color name="white_60">#D6D6D6</color>
+    <color name="white_50">#CCCCCC</color>
+    <color name="Dark_Grey_with_purple">#2E2B30</color>
+    <color name="Deep_Charcoal_Grey">#1F1C21</color>
+    <color name="Almost_Black">#151316</color>
+
+
 </resources>
