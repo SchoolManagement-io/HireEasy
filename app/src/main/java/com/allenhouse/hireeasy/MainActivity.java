@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
 
         loginButton.setOnClickListener(v -> {
             v.startAnimation(buttonScale);
-            Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+            Intent intent = new Intent(MainActivity.this, AdminLoginMain.class);
             startActivity(intent);
         });
 
