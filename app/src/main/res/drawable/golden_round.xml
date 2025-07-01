@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <!-- Black background inside the card -->
+    <solid android:color="#000000" />
+
+    <!-- Golden border -->
+    <stroke
+        android:width="2dp"
+        android:color="#A27B05" /> <!-- Classic Gold -->
+
+    <!-- Rounded corners to match the design -->
+    <corners android:radius="12dp" />
+
+    <!-- Optional inner padding to avoid text touching the border -->
+    <padding
+        android:left="8dp"
+        android:top="8dp"
+        android:right="8dp"
+        android:bottom="8dp" />
+</shape>
