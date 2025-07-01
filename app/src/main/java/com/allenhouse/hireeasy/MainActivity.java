@@ -16,7 +16,6 @@ public class MainActivity extends AppCompatActivity {
 
     private ImageView carouselImage;
     private TextView carouselText;
-    private LinearLayout menu;
     private Handler handler;
     private Runnable runnable;
     private int[] images = {R.drawable.carousel1, R.drawable.carousel2, R.drawable.carousel3};
@@ -34,11 +33,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // Initialize views
-        ImageView hamburger = findViewById(R.id.hamburger);
-        menu = findViewById(R.id.menu);
-        Button homeButton = findViewById(R.id.home_button);
         Button loginButton = findViewById(R.id.login_button);
-        Button feedbackButton = findViewById(R.id.feedback_button);
         Button getStartedButton = findViewById(R.id.get_started_button);
         Button contactFeedbackButton = findViewById(R.id.contact_feedback_button);
         carouselImage = findViewById(R.id.carousel_image);
@@ -49,39 +44,14 @@ public class MainActivity extends AppCompatActivity {
         Animation slideUp = AnimationUtils.loadAnimation(this, R.anim.slide_up);
         Animation buttonScale = AnimationUtils.loadAnimation(this, R.anim.button_scale);
 
-        hamburger.setOnClickListener(v -> {
-            if (menu.getVisibility() == View.GONE) {
-                hamburger.setImageResource(ham[1]);
-                menu.setVisibility(View.VISIBLE);
-                menu.startAnimation(slideDown);
-            } else {
-                hamburger.setImageResource(ham[0]);
-                menu.startAnimation(slideUp);
-                menu.setVisibility(View.GONE);
-            }
-        });
-
         // Apply scale animation to all buttons
         View.OnClickListener buttonClickListener = v -> {
             v.startAnimation(buttonScale);
         };
 
-        // Navigation buttons
-        homeButton.setOnClickListener(v -> {
-            v.startAnimation(buttonScale);
-            // Already on home, just highlight
-            homeButton.setBackgroundColor(getResources().getColor(R.color.red));
-        });
-
         loginButton.setOnClickListener(v -> {
             v.startAnimation(buttonScale);
             Intent intent = new Intent(MainActivity.this, LoginActivity.class);
-            startActivity(intent);
-        });
-
-        feedbackButton.setOnClickListener(v -> {
-            v.startAnimation(buttonScale);
-            Intent intent = new Intent(MainActivity.this, FeedbackActivity.class);
             startActivity(intent);
         });
 

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "103957726605",
+    "project_id": "hire-easy-b79c0",
+    "storage_bucket": "hire-easy-b79c0.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:103957726605:android:c7e7cc46da58ea96bde9c4",
+        "android_client_info": {
+          "package_name": "com.allenhouse.hireeasy"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDI7yyMPbLwUFa_ZMH04i3OX74GA0udxHg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

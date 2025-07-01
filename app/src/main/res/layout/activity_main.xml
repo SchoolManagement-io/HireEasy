@@ -43,69 +43,24 @@
             android:layout_height="wrap_content"
             android:layout_weight="1" />
 
-        <ImageView
-            android:id="@+id/hamburger"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
-            android:src="@drawable/hamburger"
-            android:contentDescription="Menu"
-            android:layout_gravity="center_vertical"
-            android:background="@android:color/transparent"
-            android:padding="4dp"
-            android:elevation="4dp" />
-    </LinearLayout>
-
-    <!-- EXPANDABLE MENU -->
-    <LinearLayout
-        android:id="@+id/menu"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/navbar"
-        android:background="#FFF8DC"
-        android:orientation="vertical"
-        android:visibility="gone"
-        android:padding="8dp"
-        android:elevation="6dp">
-
-        <Button
-            android:id="@+id/home_button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="🏠 Home"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:backgroundTint="#FFEBEE"
-            android:textColor="#C62828"
-            android:layout_marginBottom="6dp"
-            android:elevation="2dp" />
-
         <Button
             android:id="@+id/login_button"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="🔐 Login"
+            android:text="Login"
             android:textSize="18sp"
-            android:backgroundTint="#E8F5E9"
-            android:textColor="#2E7D32"
-            android:layout_marginBottom="6dp"
+            android:textStyle="bold"
+            android:backgroundTint="#00E8F5E9"
+            android:textColor="#000000"
             android:elevation="2dp" />
 
-        <Button
-            android:id="@+id/feedback_button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="✉ Feedback"
-            android:textSize="18sp"
-            android:backgroundTint="#E3F2FD"
-            android:textColor="#1565C0"
-            android:elevation="2dp" />
     </LinearLayout>
 
     <!-- SCROLLABLE CONTENT -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/menu">
+        android:layout_below="@id/navbar">
 
         <LinearLayout
             android:layout_width="match_parent"

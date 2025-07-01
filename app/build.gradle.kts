@@ -1,5 +1,6 @@
 plugins {
     alias(libs.plugins.android.application)
+    alias(libs.plugins.google.gms.google.services)
 }
 
 android {
@@ -39,6 +40,7 @@ dependencies {
     implementation ("androidx.interpolator:interpolator:1.0.0")
     implementation ("de.hdodenhof:circleimageview:3.1.0")
     implementation(libs.constraintlayout)
+    implementation(libs.firebase.database)
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
