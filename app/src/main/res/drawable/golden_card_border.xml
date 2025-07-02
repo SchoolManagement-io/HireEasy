@@ -3,15 +3,15 @@
     android:shape="rectangle">
 
     <!-- Black background inside the card -->
-    <solid android:color="#000000" />
+    <solid android:color="#1AFFFFFF" />
 
     <!-- Golden border -->
     <stroke
-        android:width="2dp"
+        android:width="4dp"
         android:color="#A27B05" /> <!-- Classic Gold -->
 
     <!-- Rounded corners to match the design -->
-    <corners android:radius="12dp" />
+    <corners android:radius="16dp" />
 
     <!-- Optional inner padding to avoid text touching the border -->
     <padding

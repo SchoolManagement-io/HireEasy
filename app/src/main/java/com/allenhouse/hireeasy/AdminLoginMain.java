@@ -28,6 +28,7 @@ public class AdminLoginMain extends AppCompatActivity {  // <-- FIXED HERE
         passwordEditText = findViewById(R.id.password);
         togglePass = findViewById(R.id.togglePass);
         loginButton = findViewById(R.id.loginButton);
+        int[] eye = {R.drawable.eye, R.drawable.eye_slash};
 
         // Toggle password visibility
         togglePass.setOnClickListener(new View.OnClickListener() {
@@ -36,9 +37,11 @@ public class AdminLoginMain extends AppCompatActivity {  // <-- FIXED HERE
                 if (isPasswordVisible) {
                     passwordEditText.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
                     isPasswordVisible = false;
+                    togglePass.setImageResource(eye[0]);
                 } else {
                     passwordEditText.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
                     isPasswordVisible = true;
+                    togglePass.setImageResource(eye[1]);
                 }
                 passwordEditText.setSelection(passwordEditText.getText().length()); // keep cursor at end
             }
