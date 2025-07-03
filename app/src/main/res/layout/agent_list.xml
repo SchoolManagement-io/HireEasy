@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:gravity="center_vertical"
+        android:background="@color/black">
+
+        <!-- Agent Details -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginEnd="16dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="223dp"
+                android:layout_height="2dp"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="Agent Name"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvMobile"
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:gravity="center"
+                android:text="9999999999"
+                android:padding="4dp" />
+
+            <TextView
+                android:id="@+id/tvEmail"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:gravity="center"
+                android:text="agent@email.com"
+                android:padding="4dp" />
+
+            <TextView
+                android:id="@+id/tvPassword"
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:gravity="center"
+                android:text="••••••••"
+                android:padding="4dp" />
+        </LinearLayout>
+
+        <!-- Action Buttons -->
+        <Button
+            android:id="@+id/btnEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Edit"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#4CAF50"
+            android:textStyle="bold"
+            android:layout_marginEnd="8dp"
+            android:padding="8dp" />
+
+        <Button
+            android:id="@+id/btnDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delete"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#FF3B3B"
+            android:textStyle="bold"
+            android:layout_marginEnd="8dp"
+            android:padding="8dp" />
+
+    </LinearLayout>
+</HorizontalScrollView>

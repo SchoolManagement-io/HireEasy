@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#111111">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingVertical="8dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/back" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="ADMIN PANEL"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_marginStart="12dp" />
+        </LinearLayout>
+
+        <!-- Total Agents Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:cardCornerRadius="20dp"
+            android:backgroundTint="@android:color/transparent">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/golden_border_box"
+                android:padding="3dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/red_black_gradient"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Total Agents"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp"
+                        android:layout_gravity="center_horizontal" />
+
+                    <TextView
+                        android:id="@+id/textTotalAgents"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="#2196F3"
+                        android:textSize="40sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="20dp"
+                        android:layout_gravity="center_horizontal" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Top Agents"
+                        android:textColor="#FF3B3B"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:layout_gravity="start"
+                        android:layout_marginBottom="8dp" />
+
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scrollbars="none">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingHorizontal="8dp">
+
+                            <ImageView
+                                android:layout_width="64dp"
+                                android:layout_height="64dp"
+                                android:layout_marginEnd="16dp"
+                                android:src="@drawable/user"
+                                android:scaleType="centerCrop"
+                                android:padding="10dp"
+                                android:background="@drawable/red_circle_border"
+                                android:clipToOutline="true" />
+
+                            <ImageView
+                                android:layout_width="64dp"
+                                android:layout_height="64dp"
+                                android:layout_marginEnd="16dp"
+                                android:src="@drawable/user"
+                                android:scaleType="centerCrop"
+                                android:padding="10dp"
+                                android:background="@drawable/blue_circle_border"
+                                android:clipToOutline="true" />
+
+                            <ImageView
+                                android:layout_width="64dp"
+                                android:layout_height="64dp"
+                                android:layout_marginEnd="16dp"
+                                android:src="@drawable/user"
+                                android:scaleType="centerCrop"
+                                android:padding="10dp"
+                                android:background="@drawable/white_circle_border"
+                                android:clipToOutline="true" />
+                        </LinearLayout>
+                    </HorizontalScrollView>
+                </LinearLayout>
+            </FrameLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Register Agent Form -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="#1E1E1E"
+            app:cardCornerRadius="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/golden_border_box"
+                android:padding="20dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp">
+
+                    <EditText
+                        android:id="@+id/editUsername"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Username"
+                        android:background="@null"
+                        android:textColor="#FFFFFF"
+                        android:textColorHint="#AAAAAA"
+                        android:paddingBottom="6dp" />
+
+                    <ImageView
+                        android:id="@+id/warnUsername"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/warning"
+                        android:visibility="invisible"
+                        android:layout_marginEnd="4dp" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1.5dp"
+                    android:background="#FFD700" />
+
+                <EditText
+                    android:id="@+id/editEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Email"
+                    android:inputType="textEmailAddress"
+                    android:background="@null"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#AAAAAA"
+                    android:paddingTop="16dp"
+                    android:paddingBottom="6dp" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1.5dp"
+                    android:background="#FFD700" />
+
+                <EditText
+                    android:id="@+id/editMobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Mobile Number"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:background="@null"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#AAAAAA"
+                    android:paddingTop="16dp"
+                    android:paddingBottom="6dp" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1.5dp"
+                    android:background="#FFD700" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="16dp">
+
+                    <EditText
+                        android:id="@+id/editPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Password"
+                        android:inputType="textPassword"
+                        android:background="@null"
+                        android:textColor="#FFFFFF"
+                        android:textColorHint="#AAAAAA"
+                        android:paddingEnd="48dp"
+                        android:paddingBottom="6dp" />
+
+                    <ImageView
+                        android:id="@+id/eyeIcon"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/hide"
+                        android:layout_marginEnd="8dp" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1.5dp"
+                    android:background="#FFD700" />
+
+                <Button
+                    android:id="@+id/btnSubmit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Submit"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:backgroundTint="#FF3B3B"
+                    android:layout_marginTop="24dp"
+                    android:padding="12dp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Registered Agents List -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:cardCornerRadius="16dp"
+            android:backgroundTint="#1E1E1E">
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/golden_border_box"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Registered Agents"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="8dp" />
+
+                    <!-- Header Row -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingVertical="4dp"
+                        android:background="#222222">
+
+                        <TextView
+                            android:layout_width="240dp"
+                            android:layout_height="wrap_content"
+                            android:text="Name"
+                            android:textSize="20sp"
+                            android:textColor="#FFD700"
+                            android:textStyle="bold"
+                            android:gravity="center_horizontal" />
+
+                        <TextView
+                            android:layout_width="240dp"
+                            android:layout_height="wrap_content"
+                            android:text="Mobile"
+                            android:textSize="20sp"
+                            android:textColor="#FFD700"
+                            android:textStyle="bold"
+                            android:gravity="center_horizontal" />
+
+                        <TextView
+                            android:layout_width="300dp"
+                            android:layout_height="wrap_content"
+                            android:text="Email"
+                            android:textSize="20sp"
+                            android:textColor="#FFD700"
+                            android:textStyle="bold"
+                            android:gravity="center_horizontal" />
+
+                        <TextView
+                            android:layout_width="240dp"
+                            android:layout_height="wrap_content"
+                            android:text="Password"
+                            android:textSize="20sp"
+                            android:textColor="#FFD700"
+                            android:textStyle="bold"
+                            android:gravity="center_horizontal" />
+
+                        <TextView
+                            android:layout_width="240dp"
+                            android:layout_height="wrap_content"
+                            android:text="Actions"
+                            android:textSize="20sp"
+                            android:textColor="#FFD700"
+                            android:textStyle="bold"
+                            android:gravity="center_horizontal" />
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="8dp"
+                        android:nestedScrollingEnabled="false"
+                        android:layout_marginBottom="8dp" />
+                </LinearLayout>
+            </HorizontalScrollView>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</ScrollView>

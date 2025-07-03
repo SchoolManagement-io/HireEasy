@@ -1,0 +1,242 @@
+[
+    {
+        "merged": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-debug-34:\\layout_agent_list.xml.flat",
+        "source": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-main-36:\\layout\\agent_list.xml"
+    },
+    {
+        "merged": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-debug-34:\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-main-36:\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-debug-34:\\drawable_red_circle_border.xml.flat",
+        "source": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-main-36:\\drawable\\red_circle_border.xml"
+    },
+    {
+        "merged": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-debug-34:\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-main-36:\\mipmap-mdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-debug-34:\\xml_backup_rules.xml.flat",
+        "source": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-main-36:\\xml\\backup_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-debug-34:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-main-36:\\mipmap-xxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-debug-34:\\drawable_blue_circle_border.xml.flat",
+        "source": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-main-36:\\drawable\\blue_circle_border.xml"
+    },
+    {
+        "merged": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-debug-34:\\drawable_carousel2.jpg.flat",
+        "source": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-main-36:\\drawable\\carousel2.jpg"
+    },
+    {
+        "merged": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-debug-34:\\mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-main-36:\\mipmap-mdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-debug-34:\\anim_fade_in.xml.flat",
+        "source": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-main-36:\\anim\\fade_in.xml"
+    },
+    {
+        "merged": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-debug-34:\\drawable_golden_round.xml.flat",
+        "source": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-main-36:\\drawable\\golden_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-debug-34:\\drawable_fast_recruit.png.flat",
+        "source": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-main-36:\\drawable\\fast_recruit.png"
+    },
+    {
+        "merged": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-debug-34:\\drawable_login_icon.png.flat",
+        "source": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-main-36:\\drawable\\login_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-debug-34:\\drawable_red_button_with_golden_border.xml.flat",
+        "source": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-main-36:\\drawable\\red_button_with_golden_border.xml"
+    },
+    {
+        "merged": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-debug-34:\\drawable_agent.png.flat",
+        "source": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-main-36:\\drawable\\agent.png"
+    },
+    {
+        "merged": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-debug-34:\\drawable_open_eye.png.flat",
+        "source": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-main-36:\\drawable\\open_eye.png"
+    },
+    {
+        "merged": "com.allenhouse.hireeasy.app-debug-34:/layout_activity_agent.xml.flat",
+        "source": "com.allenhouse.hireeasy.app-main-36:/layout/activity_agent.xml"
+    },
+    {
+        "merged": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-debug-34:\\drawable_hamburger.png.flat",
+        "source": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-main-36:\\drawable\\hamburger.png"
+    },
+    {
+        "merged": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-debug-34:\\layout_top_agent_item.xml.flat",
+        "source": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-main-36:\\layout\\top_agent_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-debug-34:\\drawable_filter.png.flat",
+        "source": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-main-36:\\drawable\\filter.png"
+    },
+    {
+        "merged": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-debug-34:\\layout_activity_agent.xml.flat",
+        "source": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-main-36:\\layout\\activity_agent.xml"
+    },
+    {
+        "merged": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-debug-34:\\drawable_ic_eye_open.xml.flat",
+        "source": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-main-36:\\drawable\\ic_eye_open.xml"
+    },
+    {
+        "merged": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-debug-34:\\drawable_verification_black.png.flat",
+        "source": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-main-36:\\drawable\\verification_black.png"
+    },
+    {
+        "merged": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-debug-34:\\drawable_carousel3.jpg.flat",
+        "source": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-main-36:\\drawable\\carousel3.jpg"
+    },
+    {
+        "merged": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-debug-34:\\drawable_ic_error.xml.flat",
+        "source": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-main-36:\\drawable\\ic_error.xml"
+    },
+    {
+        "merged": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-debug-34:\\mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-main-36:\\mipmap-hdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-debug-34:\\drawable_back.png.flat",
+        "source": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-main-36:\\drawable\\back.png"
+    },
+    {
+        "merged": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-debug-34:\\drawable_red_button_rounded.xml.flat",
+        "source": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-main-36:\\drawable\\red_button_rounded.xml"
+    },
+    {
+        "merged": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-debug-34:\\anim_button_scale.xml.flat",
+        "source": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-main-36:\\anim\\button_scale.xml"
+    },
+    {
+        "merged": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-debug-34:\\anim_slide_down.xml.flat",
+        "source": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-main-36:\\anim\\slide_down.xml"
+    },
+    {
+        "merged": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-debug-34:\\xml_data_extraction_rules.xml.flat",
+        "source": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-main-36:\\xml\\data_extraction_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-debug-34:\\drawable_paid_access.png.flat",
+        "source": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-main-36:\\drawable\\paid_access.png"
+    },
+    {
+        "merged": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-debug-34:\\drawable_feedback_icon.png.flat",
+        "source": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-main-36:\\drawable\\feedback_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-debug-34:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-main-36:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-debug-34:\\drawable_golden_border_box.xml.flat",
+        "source": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-main-36:\\drawable\\golden_border_box.xml"
+    },
+    {
+        "merged": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-debug-34:\\mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-main-36:\\mipmap-xxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-debug-34:\\drawable_white_circle_border.xml.flat",
+        "source": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-main-36:\\drawable\\white_circle_border.xml"
+    },
+    {
+        "merged": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-debug-34:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-main-36:\\mipmap-xhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-debug-34:\\drawable_red_black_gradient.xml.flat",
+        "source": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-main-36:\\drawable\\red_black_gradient.xml"
+    },
+    {
+        "merged": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-debug-34:\\drawable_warning.png.flat",
+        "source": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-main-36:\\drawable\\warning.png"
+    },
+    {
+        "merged": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-debug-34:\\drawable_ic_eye_closed.xml.flat",
+        "source": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-main-36:\\drawable\\ic_eye_closed.xml"
+    },
+    {
+        "merged": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-debug-34:\\drawable_golden_input_box.xml.flat",
+        "source": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-main-36:\\drawable\\golden_input_box.xml"
+    },
+    {
+        "merged": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-debug-34:\\drawable_easy_process.png.flat",
+        "source": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-main-36:\\drawable\\easy_process.png"
+    },
+    {
+        "merged": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-debug-34:\\anim_slide_up.xml.flat",
+        "source": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-main-36:\\anim\\slide_up.xml"
+    },
+    {
+        "merged": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-debug-34:\\mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-main-36:\\mipmap-xhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-debug-34:\\drawable_hamburger_vertical.png.flat",
+        "source": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-main-36:\\drawable\\hamburger_vertical.png"
+    },
+    {
+        "merged": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-debug-34:\\mipmap-anydpi_ic_launcher.xml.flat",
+        "source": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-main-36:\\mipmap-anydpi\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-debug-34:\\drawable_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-main-36:\\drawable\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-debug-34:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-main-36:\\mipmap-xxxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-debug-34:\\mipmap-anydpi_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-main-36:\\mipmap-anydpi\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-debug-34:\\drawable_home_icon.png.flat",
+        "source": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-main-36:\\drawable\\home_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-debug-34:\\mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-main-36:\\mipmap-hdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-debug-34:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-main-36:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-debug-34:\\drawable_carousel1.jpg.flat",
+        "source": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-main-36:\\drawable\\carousel1.jpg"
+    },
+    {
+        "merged": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-debug-34:\\layout_activity_wave_splash.xml.flat",
+        "source": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-main-36:\\layout\\activity_wave_splash.xml"
+    },
+    {
+        "merged": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-debug-34:\\drawable_hide.png.flat",
+        "source": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-main-36:\\drawable\\hide.png"
+    },
+    {
+        "merged": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-debug-34:\\drawable_app_logo.jpg.flat",
+        "source": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-main-36:\\drawable\\app_logo.jpg"
+    },
+    {
+        "merged": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-debug-34:\\drawable_feedback.png.flat",
+        "source": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-main-36:\\drawable\\feedback.png"
+    },
+    {
+        "merged": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-debug-34:\\drawable_user.png.flat",
+        "source": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-main-36:\\drawable\\user.png"
+    },
+    {
+        "merged": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-debug-34:\\drawable_bg_hireeasy_gradient_logo.xml.flat",
+        "source": "C:\\Users\\Prach\\.gradle\\daemon\\8.10.2\\com.allenhouse.hireeasy.app-main-36:\\drawable\\bg_hireeasy_gradient_logo.xml"
+    }
+]

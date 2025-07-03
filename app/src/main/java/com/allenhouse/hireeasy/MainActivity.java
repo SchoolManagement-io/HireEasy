@@ -75,25 +75,25 @@ public class MainActivity extends AppCompatActivity {
 
         loginButton.setOnClickListener(v -> {
             v.startAnimation(buttonScale);
-            Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+            Intent intent = new Intent(MainActivity.this, MainActivity.class);
             startActivity(intent);
         });
 
         feedbackButton.setOnClickListener(v -> {
             v.startAnimation(buttonScale);
-            Intent intent = new Intent(MainActivity.this, FeedbackActivity.class);
+            Intent intent = new Intent(MainActivity.this, MainActivity.class);
             startActivity(intent);
         });
 
         getStartedButton.setOnClickListener(v -> {
             v.startAnimation(buttonScale);
-            Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+            Intent intent = new Intent(MainActivity.this, MainActivity.class);
             startActivity(intent);
         });
 
         contactFeedbackButton.setOnClickListener(v -> {
             v.startAnimation(buttonScale);
-            Intent intent = new Intent(MainActivity.this, FeedbackActivity.class);
+            Intent intent = new Intent(MainActivity.this, MainActivity.class);
             startActivity(intent);
         });
 
