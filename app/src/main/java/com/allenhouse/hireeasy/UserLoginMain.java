@@ -25,7 +25,7 @@ public class UserLoginMain extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.agent_login_main);
+        setContentView(R.layout.user_login_main);
 
         // Initialize all views
         usernameEditText = findViewById(R.id.username);
@@ -84,6 +84,8 @@ public class UserLoginMain extends AppCompatActivity {
 
                 if (username.isEmpty() || email.isEmpty() || mobile.isEmpty() || password.isEmpty()) {
                     Toast.makeText(UserLoginMain.this, "Please fill all fields", Toast.LENGTH_SHORT).show();
+                } else if (!android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+                    emailEditText.setError("Please enter a valid email address");
                 } else if (mobile.length() != 10) {
                     mobileEditText.setError("Mobile number must be exactly 10 digits");
                 } else if (!username.matches("[a-zA-Z ]+")) {

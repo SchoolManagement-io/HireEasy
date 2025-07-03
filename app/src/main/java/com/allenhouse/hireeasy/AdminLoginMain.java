@@ -1,7 +1,11 @@
 package com.allenhouse.hireeasy;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.InputFilter;
 import android.text.InputType;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -10,25 +14,44 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class AdminLoginMain extends AppCompatActivity {  // <-- FIXED HERE
+public class AdminLoginMain extends AppCompatActivity {
 
     private EditText usernameEditText, emailEditText, passwordEditText;
     private ImageView togglePass;
     private Button loginButton;
     private boolean isPasswordVisible = false;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.admin_login_main); // Ensure this layout exists
+        setContentView(R.layout.admin_login_main);
 
-        // Initialize views
+        // Initialize all views
         usernameEditText = findViewById(R.id.username);
         emailEditText = findViewById(R.id.email);
+
         passwordEditText = findViewById(R.id.password);
         togglePass = findViewById(R.id.togglePass);
         loginButton = findViewById(R.id.loginButton);
-        int[] eye = {R.drawable.eye, R.drawable.eye_slash};
+
+        // ✅ Restrict username to alphabets only
+        usernameEditText.setFilters(new InputFilter[]{
+                (source, start, end, dest, dstart, dend) -> {
+                    for (int i = start; i < end; i++) {
+                        char c = source.charAt(i);
+                        if (!Character.isLetter(c) && !Character.isWhitespace(c)) {
+                            return "";
+                        }
+                    }
+                    return null;
+                }
+        });
+
+        // ✅ Hide drawableStart and hint when user types
+        setupEditTextBehavior(usernameEditText);
+        setupEditTextBehavior(emailEditText);
+        setupEditTextBehavior(passwordEditText);
 
         // Toggle password visibility
         togglePass.setOnClickListener(new View.OnClickListener() {
@@ -37,13 +60,11 @@ public class AdminLoginMain extends AppCompatActivity {  // <-- FIXED HERE
                 if (isPasswordVisible) {
                     passwordEditText.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
                     isPasswordVisible = false;
-                    togglePass.setImageResource(eye[0]);
                 } else {
                     passwordEditText.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
                     isPasswordVisible = true;
-                    togglePass.setImageResource(eye[1]);
                 }
-                passwordEditText.setSelection(passwordEditText.getText().length()); // keep cursor at end
+                passwordEditText.setSelection(passwordEditText.getText().length());
             }
         });
 
@@ -51,16 +72,34 @@ public class AdminLoginMain extends AppCompatActivity {  // <-- FIXED HERE
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String username = usernameEditText.getText().toString();
-                String email = emailEditText.getText().toString();
+                String username = usernameEditText.getText().toString().trim();
+                String email = emailEditText.getText().toString().trim();
                 String password = passwordEditText.getText().toString();
 
                 if (username.isEmpty() || email.isEmpty() || password.isEmpty()) {
                     Toast.makeText(AdminLoginMain.this, "Please fill all fields", Toast.LENGTH_SHORT).show();
-                } else if(username.equals("Kanak") && email.equals("kanak@gmail.com") && password.equals("123456")){
-                    Toast.makeText(AdminLoginMain.this, "Login Successful (Mock)", Toast.LENGTH_SHORT).show();
+                } else if (!android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+                    emailEditText.setError("Please enter a valid email address");
+                } else if (!username.matches("[a-zA-Z ]+")) {
+                  usernameEditText.setError("Only alphabets allowed in username");
+                } else {
+                    Toast.makeText(AdminLoginMain.this, "Agent Login Successful (Mock)", Toast.LENGTH_SHORT).show();
                 }
             }
+        });
+    }
+
+    // ✅ Method to hide drawableStart and hint when user types
+    private void setupEditTextBehavior(EditText editText) {
+        editText.addTextChangedListener(new TextWatcher() {
+            @Override public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+            @Override public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if (s.length() > 0) {
+                    editText.setCompoundDrawablesWithIntrinsicBounds(null, null, null, null);
+                    editText.setHint("");
+                }
+            }
+            @Override public void afterTextChanged(Editable s) {}
         });
     }
 }

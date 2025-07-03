@@ -35,11 +35,11 @@ public class AgentLoginMain extends AppCompatActivity {
         togglePass = findViewById(R.id.togglePass);
         loginButton = findViewById(R.id.loginButton);
 
-        // ✅ Restrict mobile number to 10 digits only
+        //  Restrict mobile number to 10 digits only
         mobileEditText.setInputType(InputType.TYPE_CLASS_NUMBER);
         mobileEditText.setFilters(new InputFilter[]{new InputFilter.LengthFilter(10)});
 
-        // ✅ Restrict username to alphabets only
+        // Restrict username to alphabets only
         usernameEditText.setFilters(new InputFilter[]{
                 (source, start, end, dest, dstart, dend) -> {
                     for (int i = start; i < end; i++) {
@@ -52,7 +52,7 @@ public class AgentLoginMain extends AppCompatActivity {
                 }
         });
 
-        // ✅ Hide drawableStart and hint when user types
+        // Hide drawableStart and hint when user types
         setupEditTextBehavior(usernameEditText);
         setupEditTextBehavior(emailEditText);
         setupEditTextBehavior(mobileEditText);
@@ -84,6 +84,8 @@ public class AgentLoginMain extends AppCompatActivity {
 
                 if (username.isEmpty() || email.isEmpty() || mobile.isEmpty() || password.isEmpty()) {
                     Toast.makeText(AgentLoginMain.this, "Please fill all fields", Toast.LENGTH_SHORT).show();
+                } else if (!android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+                    emailEditText.setError("Please enter a valid email address");
                 } else if (mobile.length() != 10) {
                     mobileEditText.setError("Mobile number must be exactly 10 digits");
                 } else if (!username.matches("[a-zA-Z ]+")) {
@@ -95,7 +97,7 @@ public class AgentLoginMain extends AppCompatActivity {
         });
     }
 
-    // ✅ Method to hide drawableStart and hint when user types
+    //  Method to hide drawableStart and hint when user types
     private void setupEditTextBehavior(EditText editText) {
         editText.addTextChangedListener(new TextWatcher() {
             @Override public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
