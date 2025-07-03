@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Base dark black background -->
+    <item>
+        <color android:color="#17181d" />
+    </item>
+
+    <!-- Gradient overlay of black shades -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:type="linear"
+                android:angle="135"
+                android:startColor="#17181d"
+                android:centerColor="#15181d"
+                android:endColor="#18191e" />
+            <corners android:radius="0dp" />
+        </shape>
+    </item>
+
+    <!-- Slight vignette effect -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:type="radial"
+                android:gradientRadius="500dp"
+                android:centerX="0.5"
+                android:centerY="0.5"
+                android:startColor="#15181d"
+                android:endColor="#201328" />
+        </shape>
+    </item>
+</layer-list>

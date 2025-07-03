@@ -37,6 +37,7 @@ dependencies {
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)
+    implementation ("com.google.firebase:firebase-database:20.3.0")
     implementation ("androidx.interpolator:interpolator:1.0.0")
     implementation ("de.hdodenhof:circleimageview:3.1.0")
     implementation(libs.constraintlayout)

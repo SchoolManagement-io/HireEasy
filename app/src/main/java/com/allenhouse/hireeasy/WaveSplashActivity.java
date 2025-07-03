@@ -6,7 +6,7 @@ import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class WaveSplashActivity extends AppCompatActivity {
+public class WaveSplashActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
