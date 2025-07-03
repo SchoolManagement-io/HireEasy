@@ -2,7 +2,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/black_gradient_black"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/main_page_background"
     android:fitsSystemWindows="false">
 
     <!-- NAVBAR -->
@@ -10,12 +11,11 @@
         android:id="@+id/navbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@android:color/transparent"
+        android:background="@drawable/navbar_background"
         android:orientation="horizontal"
         android:padding="15dp"
         android:elevation="6dp"
         android:gravity="center_vertical"
-        android:backgroundTint="#FFD700"
         android:backgroundTintMode="src_over"
         android:baselineAligned="false">
 
@@ -32,8 +32,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="HireEasy"
-            android:textColor="#B30000"
-            android:textSize="26sp"
+            android:textColor="@color/app_name_color"
+            android:textSize="28sp"
             android:textStyle="bold"
             android:layout_marginStart="12dp"
             android:layout_gravity="center_vertical"
@@ -49,10 +49,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Login"
-            android:textSize="18sp"
+            android:textSize="20sp"
             android:textStyle="bold"
-            android:backgroundTint="#00E8F5E9"
-            android:textColor="#000000"
+            android:backgroundTint="#1B8D6037"
+            android:textColor="@color/button_text_color"
             android:elevation="2dp" />
 
     </LinearLayout>
@@ -78,24 +78,27 @@
                 android:layout_margin="12dp"
                 android:elevation="5dp">
 
-                <ImageView
+                <com.google.android.material.imageview.ShapeableImageView
                     android:id="@+id/carousel_image"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:scaleType="centerCrop"
                     android:src="@drawable/carousel1"
+                    app:shapeAppearanceOverlay="@style/RoundedImageView"
                     android:background="@android:color/darker_gray" />
 
             </RelativeLayout>
 
             <!-- GET STARTED BUTTON -->
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/get_started_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="🚀 Get Started"
-                android:backgroundTint="#D32F2F"
-                android:textColor="#FFFFFF"
+                android:text="Get Started"
+                style="@style/Widget.MaterialComponents.Button"
+                android:backgroundTint="@color/button_background"
+                app:cornerRadius="10dp"
+                android:textColor="@color/button_text_color"
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="20dp"
@@ -105,14 +108,16 @@
                 android:paddingBottom="12dp"
                 android:textSize="16sp"
                 android:fontFamily="sans-serif-medium"
+                android:textStyle="bold"
                 android:elevation="5dp" />
+
 
             <!-- FEATURES TITLE -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="✨ Why Choose HireEasy?"
-                android:textColor="#FFD700"
+                android:text="Why Choose HireEasy?"
+                android:textColor="@color/heading_color"
                 android:textSize="28sp"
                 android:textStyle="bold"
                 android:layout_gravity="center"
@@ -145,14 +150,14 @@
                         android:orientation="vertical"
                         android:padding="18dp"
                         android:layout_marginEnd="6dp"
-                        android:background="#FFFFFF"
+                        android:background="@drawable/card_background"
                         android:elevation="4dp"
                         android:gravity="center"
                         android:minHeight="200dp">
 
                         <ImageView
-                            android:layout_width="60dp"
-                            android:layout_height="60dp"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
                             android:src="@drawable/easy_process"
                             android:layout_gravity="center" />
 
@@ -160,7 +165,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Easy Hiring Process"
-                            android:textColor="#000000"
+                            android:textColor="@color/text_color"
                             android:textSize="18sp"
                             android:textStyle="bold"
                             android:layout_gravity="center"
@@ -171,7 +176,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Search, filter, and hire domestic help with just a few taps — no complicated steps!"
-                            android:textColor="#555555"
+                            android:textColor="@color/text_color"
                             android:textSize="14sp"
                             android:gravity="center"
                             android:layout_marginTop="6dp" />
@@ -186,22 +191,22 @@
                         android:orientation="vertical"
                         android:padding="18dp"
                         android:layout_marginStart="6dp"
-                        android:background="#FFFFFF"
+                        android:background="@drawable/card_background"
                         android:elevation="4dp"
                         android:gravity="center"
                         android:minHeight="200dp">
 
                         <ImageView
-                            android:layout_width="60dp"
-                            android:layout_height="60dp"
-                            android:src="@drawable/verification_black"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/verified_profiles"
                             android:layout_gravity="center" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Verified Profiles"
-                            android:textColor="#000000"
+                            android:textColor="@color/text_color"
                             android:textSize="18sp"
                             android:textStyle="bold"
                             android:layout_gravity="center"
@@ -212,7 +217,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Each servant’s identity is authenticated by agents using Aadhaar and manual checks."
-                            android:textColor="#555555"
+                            android:textColor="@color/text_color"
                             android:textSize="14sp"
                             android:gravity="center"
                             android:layout_marginTop="6dp" />
@@ -237,14 +242,14 @@
                         android:orientation="vertical"
                         android:padding="18dp"
                         android:layout_marginEnd="6dp"
-                        android:background="#FFFFFF"
+                        android:background="@drawable/card_background"
                         android:elevation="4dp"
                         android:gravity="center"
                         android:minHeight="200dp">
 
                         <ImageView
-                            android:layout_width="60dp"
-                            android:layout_height="60dp"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
                             android:src="@drawable/paid_access"
                             android:layout_gravity="center" />
 
@@ -252,7 +257,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="₹20 to View Details"
-                            android:textColor="#000000"
+                            android:textColor="@color/text_color"
                             android:textSize="18sp"
                             android:textStyle="bold"
                             android:layout_gravity="center"
@@ -263,7 +268,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Basic profiles are free to browse. Unlock full details and contact info for just ₹20!"
-                            android:textColor="#555555"
+                            android:textColor="@color/text_color"
                             android:textSize="14sp"
                             android:gravity="center"
                             android:layout_marginTop="6dp" />
@@ -278,22 +283,22 @@
                         android:orientation="vertical"
                         android:padding="18dp"
                         android:layout_marginStart="6dp"
-                        android:background="#FFFFFF"
+                        android:background="@drawable/card_background"
                         android:elevation="4dp"
                         android:gravity="center"
                         android:minHeight="200dp">
 
                         <ImageView
-                            android:layout_width="60dp"
-                            android:layout_height="60dp"
-                            android:src="@drawable/agent"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/verified_agents"
                             android:layout_gravity="center" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Agent-Based Reliability"
-                            android:textColor="#000000"
+                            android:textColor="@color/text_color"
                             android:textSize="18sp"
                             android:textStyle="bold"
                             android:layout_gravity="center"
@@ -304,7 +309,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Each candidate is added by verified agents who manage availability and updates."
-                            android:textColor="#555555"
+                            android:textColor="@color/text_color"
                             android:textSize="14sp"
                             android:gravity="center"
                             android:layout_marginTop="6dp" />
@@ -329,14 +334,14 @@
                         android:orientation="vertical"
                         android:padding="18dp"
                         android:layout_marginEnd="6dp"
-                        android:background="#FFFFFF"
+                        android:background="@drawable/card_background"
                         android:elevation="4dp"
                         android:gravity="center"
                         android:minHeight="200dp">
 
                         <ImageView
-                            android:layout_width="60dp"
-                            android:layout_height="60dp"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
                             android:src="@drawable/filter"
                             android:layout_gravity="center" />
 
@@ -344,7 +349,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Smart Filtering Options"
-                            android:textColor="#000000"
+                            android:textColor="@color/text_color"
                             android:textSize="18sp"
                             android:textStyle="bold"
                             android:layout_gravity="center"
@@ -355,7 +360,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Filter by job role, location, gender, and experience to find the best match fast."
-                            android:textColor="#555555"
+                            android:textColor="@color/text_color"
                             android:textSize="14sp"
                             android:gravity="center"
                             android:layout_marginTop="6dp" />
@@ -370,14 +375,14 @@
                         android:orientation="vertical"
                         android:padding="18dp"
                         android:layout_marginStart="6dp"
-                        android:background="#FFFFFF"
+                        android:background="@drawable/card_background"
                         android:elevation="4dp"
                         android:gravity="center"
                         android:minHeight="200dp">
 
                         <ImageView
-                            android:layout_width="60dp"
-                            android:layout_height="60dp"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
                             android:src="@drawable/feedback"
                             android:layout_gravity="center" />
 
@@ -385,7 +390,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Real User Feedback"
-                            android:textColor="#000000"
+                            android:textColor="@color/text_color"
                             android:textSize="18sp"
                             android:textStyle="bold"
                             android:layout_gravity="center"
@@ -396,7 +401,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="View honest reviews and experiences from previous employers before you hire."
-                            android:textColor="#555555"
+                            android:textColor="@color/text_color"
                             android:textSize="14sp"
                             android:gravity="center"
                             android:layout_marginTop="6dp" />
@@ -416,8 +421,8 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="💬 Share Your Feedback"
-                    android:textColor="#FFD700"
+                    android:text="Share Your Feedback"
+                    android:textColor="@color/heading_color"
                     android:textSize="24sp"
                     android:textStyle="bold"
                     android:layout_gravity="center" />
@@ -427,9 +432,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Enter your email"
-                    android:textColor="#FFFFFF"
-                    android:textColorHint="#CCCCCC"
-                    android:backgroundTint="#FFFFFF"
+                    android:textColor="@color/text_color"
+                    android:textColorHint="@color/text_color"
+                    android:backgroundTint="@color/text_color"
                     android:layout_marginTop="12dp"
                     android:padding="12dp"
                     android:inputType="textEmailAddress" />
@@ -439,9 +444,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Enter your feedback"
-                    android:textColor="#FFFFFF"
-                    android:textColorHint="#CCCCCC"
-                    android:backgroundTint="#FFFFFF"
+                    android:textColor="@color/text_color"
+                    android:textColorHint="@color/text_color"
+                    android:backgroundTint="@color/text_color"
                     android:layout_marginTop="12dp"
                     android:padding="12dp"
                     android:minHeight="100dp"
@@ -453,8 +458,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Submit Feedback"
-                    android:backgroundTint="#FF0000"
-                    android:textColor="#FFFFFF"
+                    android:backgroundTint="@color/button_background"
+                    android:textColor="@color/button_text_color"
                     android:layout_gravity="center"
                     android:layout_marginTop="12dp"
                     android:elevation="4dp" />
@@ -472,8 +477,8 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="📬 Contact Us"
-                    android:textColor="#FFD700"
+                    android:text="Contact Us"
+                    android:textColor="#b98a4c"
                     android:textSize="24sp"
                     android:textStyle="bold"
                     android:layout_gravity="center" />
@@ -483,7 +488,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="hireeasy@gmail.com"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/text_color"
                     android:textSize="16sp"
                     android:layout_gravity="center"
                     android:layout_marginTop="10dp" />
@@ -493,7 +498,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="linkedin.com/company/hireeasy"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/text_color"
                     android:textSize="16sp"
                     android:layout_gravity="center"
                     android:layout_marginTop="8dp" />

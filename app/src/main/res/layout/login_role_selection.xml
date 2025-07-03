@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/black_gradient_black"
+    android:background="@color/main_page_background"
     android:padding="24dp"
     android:fitsSystemWindows="false">
 
@@ -12,48 +13,53 @@
         android:id="@+id/welcomeText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="35dp"
         android:fontFamily="sans-serif-medium"
         android:gravity="center"
-        android:text="Welcome to\nHireEasy"
-        android:textColor="#FFD700"
+        android:text="Welcome to HireEasy"
+        android:textColor="@color/heading_color"
         android:textSize="28sp"
         android:textStyle="bold"
-        android:transitionName="welcome_transition" />
+        android:transitionName="welcome_transition"
+        card_view:layout_constraintTop_toTopOf="parent"
+        card_view:layout_constraintStart_toStartOf="parent"
+        card_view:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- Card Options -->
+    <!-- Role Options Container -->
     <LinearLayout
         android:id="@+id/roleOptions"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/welcomeText"
         android:layout_marginTop="48dp"
-        android:orientation="horizontal"
+        android:layout_marginBottom="32dp"
+        android:orientation="vertical"
         android:gravity="center"
-        android:weightSum="3">
+        card_view:layout_constraintTop_toBottomOf="@id/welcomeText"
+        card_view:layout_constraintStart_toStartOf="parent"
+        card_view:layout_constraintEnd_toEndOf="parent"
+        card_view:layout_constraintWidth_percent="0.9">
 
         <!-- Admin Card -->
         <androidx.cardview.widget.CardView
             android:id="@+id/adminCard"
-            android:layout_width="0dp"
-            android:layout_height="120dp"
-            android:layout_weight="1"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
             android:layout_margin="8dp"
             card_view:cardBackgroundColor="#00000000"
-            card_view:cardCornerRadius="12dp"
-            card_view:cardElevation="6dp">
+            card_view:cardCornerRadius="10dp"
+            card_view:cardElevation="10dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/gradient_red_blue"
+                android:background="@drawable/card_background"
                 android:orientation="vertical"
                 android:gravity="center">
 
                 <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginEnd="5dp"
                     android:src="@drawable/admin"
                     android:contentDescription="Admin Role" />
 
@@ -61,7 +67,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Admin"
-                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:textColor="@color/button_text_color"
                     android:textStyle="bold"
                     android:layout_marginTop="8dp" />
             </LinearLayout>
@@ -70,24 +77,23 @@
         <!-- Agent Card -->
         <androidx.cardview.widget.CardView
             android:id="@+id/agentCard"
-            android:layout_width="0dp"
-            android:layout_height="120dp"
-            android:layout_weight="1"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
             android:layout_margin="8dp"
             card_view:cardBackgroundColor="#00000000"
-            card_view:cardCornerRadius="12dp"
-            card_view:cardElevation="6dp">
+            card_view:cardCornerRadius="10dp"
+            card_view:cardElevation="10dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/gradient_gold_brown"
+                android:background="@drawable/card_background"
                 android:orientation="vertical"
                 android:gravity="center">
 
                 <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
                     android:src="@drawable/agent"
                     android:contentDescription="Agent Role" />
 
@@ -95,7 +101,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Agent"
-                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:textColor="@color/button_text_color"
                     android:textStyle="bold"
                     android:layout_marginTop="8dp" />
             </LinearLayout>
@@ -104,24 +111,23 @@
         <!-- User Card -->
         <androidx.cardview.widget.CardView
             android:id="@+id/userCard"
-            android:layout_width="0dp"
-            android:layout_height="120dp"
-            android:layout_weight="1"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
             android:layout_margin="8dp"
             card_view:cardBackgroundColor="#00000000"
-            card_view:cardCornerRadius="12dp"
-            card_view:cardElevation="6dp">
+            card_view:cardCornerRadius="10dp"
+            card_view:cardElevation="10dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/gradient_green_blue"
+                android:background="@drawable/card_background"
                 android:orientation="vertical"
                 android:gravity="center">
 
                 <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
                     android:src="@drawable/user"
                     android:contentDescription="User Role" />
 
@@ -129,7 +135,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="User"
-                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:textColor="@color/button_text_color"
                     android:textStyle="bold"
                     android:layout_marginTop="8dp" />
             </LinearLayout>
@@ -141,15 +148,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
+        card_view:layout_constraintBottom_toBottomOf="parent"
+        card_view:layout_constraintStart_toStartOf="parent"
+        card_view:layout_constraintEnd_toEndOf="parent"
         android:layout_marginBottom="16dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="English (US)"
-            android:textColor="#0000FF"
-            android:textSize="14sp"/>
+            android:textColor="@color/text_color"
+            android:textSize="16sp"/>
     </LinearLayout>
-</RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

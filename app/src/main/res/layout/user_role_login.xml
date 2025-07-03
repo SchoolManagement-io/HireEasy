@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_page_background"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Header -->
+        <TextView
+            android:id="@+id/appname"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="HIRE EASY"
+            android:textSize="23sp"
+            android:textStyle="bold"
+            android:layout_marginTop="15dp"
+            android:textColor="@color/heading_color"
+            android:gravity="center"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:fontFamily="@font/poppins_bolditalic" />
+
+        <!-- Tagline -->
+        <TextView
+            android:id="@+id/tagline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Where Work Meets Workers"
+            android:textColor="@color/text_color"
+            android:textSize="18sp"
+            app:fontFamily="@font/poppins_mediumitalic"
+            app:layout_constraintTop_toBottomOf="@id/appname"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Secure Text -->
+        <TextView
+            android:id="@+id/secure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:text="Secure Login for Users"
+            android:textColor="@color/text_color"
+            android:textSize="15sp"
+            android:fontFamily="@font/poppins_regular"
+            app:layout_constraintTop_toBottomOf="@id/tagline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Login Card -->
+        <LinearLayout
+            android:id="@+id/loginCard"
+            android:layout_width="380dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/card_background"
+            android:padding="16dp"
+            android:elevation="4dp"
+            android:clipToPadding="false"
+            android:layout_marginTop="15dp"
+            app:layout_constraintTop_toBottomOf="@id/secure"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="User Login"
+                android:fontFamily="@font/poppins_semiboiditalic"
+                android:textColor="@color/heading_color"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:layout_gravity="center"/>
+
+            <EditText
+                android:id="@+id/username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:background="@null"
+                android:drawableStart="@drawable/pen"
+                android:hint="Username"
+                android:padding="10dp"
+                android:textColor="@color/button_text_color"
+                android:drawablePadding="10dp"
+                android:textColorHint="@color/text_color" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/button_background"/>
+
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@null"
+                android:drawableStart="@drawable/mail"
+                android:hint="Email"
+                android:padding="10dp"
+                android:drawablePadding="10dp"
+                android:textColor="@color/button_text_color"
+                android:textColorHint="@color/text_color" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/button_background"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="12dp"
+                android:gravity="center_vertical">
+
+                <EditText
+                    android:id="@+id/password"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:hint="Password"
+                    android:drawableStart="@drawable/shield"
+                    android:inputType="textPassword"
+                    android:padding="10dp"
+                    android:drawablePadding="10dp"
+                    android:layout_marginTop="12dp"
+                    android:textColor="@color/button_text_color"
+                    android:textColorHint="@color/text_color"/>
+
+                <ImageView
+                    android:id="@+id/togglePass"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:padding="8dp"
+                    android:src="@drawable/eye"
+                    android:drawableStart="@drawable/shield"
+                    android:layout_marginTop="10dp"
+                    android:contentDescription="Toggle Password"/>
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/button_background"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/loginButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Login"
+                style="@style/Widget.MaterialComponents.Button"
+                android:backgroundTint="@color/button_background"
+                android:textColor="@color/button_text_color"
+                android:textStyle="bold"
+                app:cornerRadius="10dp"
+                android:textSize="16sp"
+                android:fontFamily="@font/poppins_semiboiditalic"
+                android:elevation="6dp"
+                android:padding="12dp"/>
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

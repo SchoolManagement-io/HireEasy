@@ -34,7 +34,7 @@ public class WaveView extends View {
 
     private void init() {
         wavePaint = new Paint();
-        wavePaint.setColor(Color.parseColor("#283593")); // Canva-like teal color
+        wavePaint.setColor(Color.parseColor("#B98A4C"));
         wavePaint.setStyle(Paint.Style.FILL);
         wavePaint.setAntiAlias(true);
 
@@ -45,7 +45,7 @@ public class WaveView extends View {
         this.onAnimationComplete = onComplete;
         // Animate wave progress from 0 (top) to 1 (bottom) slowly
         animate()
-                .setDuration(4000) // 4 seconds for slower reveal
+                .setDuration(2000) // 4 seconds for slower reveal
                 .setInterpolator(new AccelerateDecelerateInterpolator()) // Smooth easing
                 .setUpdateListener(animation -> {
                     waveProgress = animation.getAnimatedFraction();

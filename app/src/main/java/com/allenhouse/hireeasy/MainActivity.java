@@ -104,7 +104,7 @@ public class MainActivity extends BaseActivity {
             @Override
             public void run() {
                 carouselImage.setImageResource(images[currentIndex]);
-                Animation fadeIn = AnimationUtils.loadAnimation(MainActivity.this, R.anim.fade_in);
+                Animation fadeIn = AnimationUtils.loadAnimation(MainActivity.this, R.anim.slide_right);
                 carouselImage.startAnimation(fadeIn);
                 currentIndex = (currentIndex + 1) % images.length;
                 handler.postDelayed(this, 3000);
