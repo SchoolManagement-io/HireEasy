@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black_100"
+    android:background="@drawable/red_black_gradient"
     android:fillViewport="true">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -78,7 +78,7 @@
                 android:textColor="#FFFFFF"
                 android:textSize="22sp"
                 android:textStyle="bold"
-                android:backgroundTint="#CC8847"
+                android:background="@null"
                 android:fontFamily="@font/poppins_semiboiditalic"
                 android:layout_gravity="center"/>
 
@@ -88,13 +88,19 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:backgroundTint="#CC8847"
-                android:drawableStart="@android:drawable/ic_menu_edit"
+                android:background="@null"
+                android:drawableStart="@drawable/pen"
                 android:hint="Username"
                 android:padding="10dp"
-                android:textColor="#F8F8F8"
+                android:textColor="#FFFFFF"
                 android:drawablePadding="10dp"
-                android:textColorHint="#EDE6E6" />
+                android:textColorHint="#EDE6E6"
+                android:inputType="textCapWords"
+                android:maxLines="1" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1.5dp"
+                android:background="#A27B05"/>
 
             <!-- Email -->
             <EditText
@@ -102,13 +108,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
-                android:backgroundTint="#CC8847"
-                android:drawableStart="@android:drawable/ic_dialog_email"
-                android:hint="Email"
+                android:background="@null"
+                android:drawableStart="@drawable/mail"
+                android:hint="example12@gmail.com"
                 android:padding="10dp"
                 android:drawablePadding="10dp"
                 android:textColor="#FDFDFD"
                 android:textColorHint="#EDE6E6" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1.5dp"
+                android:background="#A27B05"/>
 
             <!-- Mobile Number -->
             <EditText
@@ -116,13 +126,19 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
-                android:backgroundTint="#CC8847"
-                android:drawableStart="@android:drawable/ic_menu_call"
+                android:background="@null"
+                android:drawableStart="@drawable/num"
                 android:hint="Mobile Number"
                 android:padding="10dp"
                 android:drawablePadding="10dp"
-                android:textColor="#FDFDFD"
+                android:textColor="#FFFFFF"
+                android:maxLength="10"
+                android:digits="0123456789"
                 android:textColorHint="#EDE6E6" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1.5dp"
+                android:background="#A27B05"/>
 
             <!-- Password with toggle -->
             <LinearLayout
@@ -137,7 +153,7 @@
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
-                    android:backgroundTint="#CC8847"
+                    android:background="@null"
                     android:hint="Password"
                     android:inputType="textPassword"
                     android:padding="10dp"
@@ -153,6 +169,10 @@
                     android:src="@drawable/eye"
                     android:contentDescription="Toggle Password"/>
             </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1.5dp"
+                android:background="#A27B05"/>
 
             <!-- Login Button -->
             <Button
@@ -160,9 +180,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:backgroundTint="#008000"
+                android:backgroundTint="#F62D2D"
                 android:text="Login"
-                android:textColor="#FFFFFF"/>
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:fontFamily="@font/poppins_semiboiditalic"
+                android:elevation="6dp"
+                android:padding="12dp" />
+
         </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
