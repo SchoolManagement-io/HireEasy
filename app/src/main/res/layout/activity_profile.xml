@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="16dp"
+    android:background="@color/black">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <FrameLayout
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:id="@+id/profile_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/circle_background"
+                android:clipToOutline="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_profile" />
+
+            <ImageButton
+                android:id="@+id/btn_edit"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_gravity="bottom|end"
+                android:layout_margin="4dp"
+                android:background="@drawable/rounded_button"
+                android:src="@android:drawable/ic_menu_camera"
+                app:tint="@android:color/white" />
+        </FrameLayout>
+
+        <EditText
+            android:id="@+id/edit_name"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/rounded_edittext"
+            android:padding="12dp"
+            android:textColor="#E0E0E0"
+            android:textColorHint="#B0B0B0"
+            android:hint="Name"
+            android:inputType="textPersonName"
+            tools:ignore="HardcodedText" />
+
+        <EditText
+            android:id="@+id/edit_mobile"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_edittext"
+            android:hint="Mobile Number"
+            android:inputType="phone"
+            android:maxLength="10"
+            android:padding="12dp"
+            android:textColor="#E0E0E0"
+            android:textColorHint="#B0B0B0"
+            tools:ignore="HardcodedText,InefficientWeight" />
+
+        <EditText
+            android:id="@+id/edit_gmail"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/rounded_edittext"
+            android:hint="Email"
+            android:inputType="textPostalAddress"
+            android:padding="12dp"
+            android:textColor="#E0E0E0"
+            android:textColorHint="#B0B0B0"
+            tools:ignore="HardcodedText" />
+
+<!--        <EditText-->
+<!--            android:id="@+id/edit_address"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="48dp"-->
+<!--            android:layout_marginBottom="16dp"-->
+<!--            android:background="@drawable/rounded_edittext"-->
+<!--            android:hint="Current Address"-->
+<!--            android:inputType="textPostalAddress"-->
+<!--            android:padding="12dp"-->
+<!--            android:textColor="#E0E0E0"-->
+<!--            android:textColorHint="#B0B0B0"/>-->
+
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:backgroundTint="#D32F2F"
+            android:fontFamily="sans-serif-medium"
+            android:text="Submit"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            tools:ignore="HardcodedText"
+            />
+        <Button
+            android:id="@+id/change_pass"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:backgroundTint="#D32F2F"
+            android:layout_marginTop="5dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="Change Password"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            tools:ignore="HardcodedText"
+            />
+
+    </LinearLayout>
+</ScrollView>

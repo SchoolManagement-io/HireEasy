@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "816707494162",
+    "project_id": "servent-f2bd7",
+    "storage_bucket": "servent-f2bd7.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:816707494162:android:a6eea663e99c84a40d53cb",
+        "android_client_info": {
+          "package_name": "com.allenhouse.servent"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAheblzkENK5NlPJ25rUPT1iY8b2m7IDqc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
