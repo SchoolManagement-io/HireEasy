@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Base.Theme.HireEasy" parent="Theme.Material3.DayNight.NoActionBar">
+        
+        <item name="colorPrimary">#01000000</item>
+        <item name="colorPrimaryVariant">#01000000</item>
+        <item name="colorOnPrimary">#01000000</item>
+        
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item> 
+    </style>
+    <style name="Theme.HireEasy.NoActionBar.FullScreen" parent="Base.Theme.HireEasy">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        
+        <item name="android:fitsSystemWindows">false</item>
+    </style>
+</resources>

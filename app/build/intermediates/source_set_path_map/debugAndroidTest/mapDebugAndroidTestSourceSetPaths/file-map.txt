@@ -1,0 +1,5 @@
+com.allenhouse.hireeasy.test.app-core-1.6.1-0 C:\Users\shukl\.gradle\caches\8.10.2\transforms\8128d6aab5dada333ea0d20c5bd4a5f0\transformed\core-1.6.1\res
+com.allenhouse.hireeasy.test.app-androidTest-1 C:\Users\shukl\AndroidStudioProjects\HireEasy\app\build\generated\res\resValues\androidTest\debug
+com.allenhouse.hireeasy.test.app-mergeDebugAndroidTestResources-2 C:\Users\shukl\AndroidStudioProjects\HireEasy\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
+com.allenhouse.hireeasy.test.app-mergeDebugAndroidTestResources-3 C:\Users\shukl\AndroidStudioProjects\HireEasy\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
+com.allenhouse.hireeasy.test.app-debugAndroidTest-4 C:\Users\shukl\AndroidStudioProjects\HireEasy\app\build\intermediates\merged_res\debugAndroidTest\mergeDebugAndroidTestResources

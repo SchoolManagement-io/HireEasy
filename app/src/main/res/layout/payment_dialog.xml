@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="@color/colorBackground"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:elevation="6dp"
+        android:padding="20dp"
+        android:orientation="vertical"
+        android:background="@color/colorBackground">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/app_logo"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hire Easy"
+                android:fontFamily="@font/poppins_bolditalic"
+                android:textSize="20sp"
+                android:textColor="@color/colorTextPrimary"
+                android:layout_marginStart="10dp"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Servant Registration Payment"
+            android:textSize="16sp"
+            android:textColor="@color/colorTextPrimary"
+            android:layout_marginTop="10dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Email: "
+                android:textSize="14sp"
+                android:textColor="@color/colorTextPrimary"/>
+
+            <TextView
+                android:id="@+id/agentEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="sample@gmail.com"
+                android:textSize="14sp"
+                android:textColor="@color/colorTextPrimary"
+                android:layout_marginLeft="10dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mobile: "
+                android:textSize="14sp"
+                android:textColor="@color/colorTextPrimary"/>
+
+            <TextView
+                android:id="@+id/agentMobile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="9999999999"
+                android:textSize="14sp"
+                android:textColor="@color/colorTextPrimary"
+                android:layout_marginLeft="10dp"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Redeem Code"
+            android:textSize="14sp"
+            android:textColor="@color/colorTextPrimary"
+            android:layout_marginTop="10dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            android:layout_marginTop="5dp">
+
+            <EditText
+                android:id="@+id/editRedeem"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_edittext"
+                android:hint="Enter Redeem Code"
+                android:padding="12dp"/>
+
+            <Button
+                android:id="@+id/btnApply"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_weight="2"
+                android:text="Apply"
+                android:backgroundTint="@android:color/transparent"
+                android:textColor="@color/colorTextPrimary"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Payable Amount: "
+                android:textSize="16sp"
+                android:textColor="@color/colorTextPrimary"/>
+
+            <TextView
+                android:id="@+id/payableAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rs. 50"
+                android:textSize="16sp"
+                android:textColor="@color/colorTextPrimary"
+                android:layout_marginLeft="5dp"/>
+
+            <ImageButton
+                android:id="@+id/appliedSuccessBtn"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/check"
+                android:scaleType="fitCenter"
+                android:background="@android:color/transparent"
+                android:layout_marginStart="20dp"
+                android:visibility="gone"/>
+            <TextView
+                android:id="@+id/appliedSuccessText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Redeem Code Applied"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorSuccess"
+                android:layout_marginLeft="5dp"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/payAmountBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:text="Pay Amount"
+            android:backgroundTint="@color/colorSuccess"
+            android:textStyle="bold"
+            android:textColor="@color/colorTextInverse"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="15dp"
+            app:cornerRadius="15dp"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="100% Secure Payments via Our Verified Partner Gateway"
+            android:textSize="12sp"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="center"
+            android:textColor="@color/colorTextPrimary"/>
+
+    </LinearLayout>
+
+</LinearLayout>

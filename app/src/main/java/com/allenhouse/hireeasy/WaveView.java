@@ -34,7 +34,7 @@ public class WaveView extends View {
 
     private void init() {
         wavePaint = new Paint();
-        wavePaint.setColor(Color.parseColor("#B98A4C"));
+        wavePaint.setColor(Color.parseColor("#007BFF"));
         wavePaint.setStyle(Paint.Style.FILL);
         wavePaint.setAntiAlias(true);
 

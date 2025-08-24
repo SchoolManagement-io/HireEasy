@@ -1,0 +1,912 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@drawable/agent_dashboard_background"
+    android:weightSum="1">
+
+    <!-- Top Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/agentTopbar"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingTop="20dp"
+        android:paddingBottom="8dp"
+        android:paddingHorizontal="15dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="AGENT PANEL"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorTextInverse"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="1">
+
+        <!-- Home Section -->
+        <LinearLayout
+            android:id="@+id/homeSection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="16dp"
+            android:layout_marginHorizontal="10dp"
+            android:visibility="visible"
+            android:padding="15dp">
+
+            <TextView
+                android:id="@+id/username_head"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Agent Dashboard"
+                android:textAlignment="center"
+                android:textColor="@color/colorTextPrimary"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="10dp" />
+
+            <!-- Cards Section -->
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none"
+                android:paddingHorizontal="8dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <!-- Total Registration Card -->
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="140dp"
+                        android:layout_height="140dp"
+                        android:layout_marginEnd="12dp"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="6dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:background="@drawable/total_registration_card"
+                            android:paddingTop="8dp"
+                            android:paddingBottom="8dp">
+
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:src="@drawable/total_registeration"/>
+
+                            <TextView
+                                android:id="@+id/tvTotalRegistration"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textColor="@color/colorTextPrimary"
+                                android:textSize="28sp"
+                                android:textStyle="bold"
+                                android:layout_marginTop="10dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Total Registration"
+                                android:textColor="@color/colorTextSecondary"
+                                android:textSize="15sp"
+                                android:layout_marginTop="4dp" />
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <!-- Verified Card -->
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="140dp"
+                        android:layout_height="140dp"
+                        android:layout_marginEnd="12dp"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="6dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:background="@drawable/verified_card"
+                            android:paddingTop="8dp"
+                            android:paddingBottom="8dp">
+
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:src="@drawable/verified_registeration"/>
+
+                            <TextView
+                                android:id="@+id/tvVerified"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textColor="@color/colorTextPrimary"
+                                android:textSize="28sp"
+                                android:textStyle="bold"
+                                android:layout_marginTop="10dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Verified"
+                                android:textColor="@color/colorTextSecondary"
+                                android:textSize="15sp"
+                                android:layout_marginTop="4dp" />
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <!-- Unverified Card -->
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="140dp"
+                        android:layout_height="140dp"
+                        android:layout_marginEnd="12dp"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="6dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:background="@drawable/unverified_card"
+                            android:paddingTop="8dp"
+                            android:paddingBottom="8dp">
+
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:src="@drawable/unverified_registeration"/>
+
+                            <TextView
+                                android:id="@+id/tvUnverified"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textColor="@color/colorTextPrimary"
+                                android:textSize="28sp"
+                                android:textStyle="bold"
+                                android:layout_marginTop="10dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Unverified"
+                                android:textColor="@color/colorTextSecondary"
+                                android:textSize="15sp"
+                                android:layout_marginTop="4dp" />
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <!-- Registered Servants List -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Registered Servants"
+                android:textColor="@color/colorTextPrimary"
+                android:textSize="20sp"
+                android:layout_gravity="center"
+                android:textStyle="bold"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="20dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="2dp">
+
+                <EditText
+                    android:id="@+id/editFilter"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:hint="Filter by Name, Mobile or Address"
+                    android:textSize="15sp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/rounded_edittext"
+                    android:textColor="@color/colorTextPrimary"
+                    android:textColorHint="@color/colorTextSecondary"
+                    android:layout_weight="1"
+                    android:padding="6dp"/>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rounded_edittext">
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/filterSpinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:paddingStart="12dp"
+                        android:background="@android:color/transparent"
+                        android:popupBackground="@color/colorSurface"
+                        android:spinnerMode="dropdown"/>
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="end|center_vertical"
+                        android:layout_marginEnd="12dp"
+                        android:src="@drawable/spinner_arrow"
+                        android:contentDescription="Dropdown arrow" />
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:elevation="6dp"
+                app:cardBackgroundColor="@color/colorSurface"
+                app:cardCornerRadius="10dp">
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbarSize="0dp"
+                    android:scrollbars="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/tabular_data"
+                        android:layout_width="match_parent"
+                        android:layout_height="400dp"
+                        android:background="@android:color/transparent"
+                        android:orientation="vertical">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recyclerViewServants"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="4dp"
+                            android:nestedScrollingEnabled="true" />
+                    </LinearLayout>
+                </ScrollView>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <!-- Servant Registration Section -->
+        <LinearLayout
+            android:id="@+id/registrationSection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginVertical="10dp"
+            android:layout_marginHorizontal="10dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/register_servant"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Register Servants"
+                android:textAlignment="center"
+                android:textColor="@color/colorTextPrimary"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="15dp"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:cardCornerRadius="10dp"
+                app:cardBackgroundColor="@android:color/transparent">
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="@drawable/card_background"
+                        android:padding="20dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginEnd="5dp"
+                                android:layout_weight="1">
+
+                                <!-- Name and Mobile -->
+                                <EditText
+                                    android:id="@+id/tvName"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="48dp"
+                                    android:layout_marginBottom="16dp"
+                                    android:background="@drawable/rounded_edittext"
+                                    android:hint="Name"
+                                    android:inputType="textPersonName"
+                                    android:gravity="center_vertical"
+                                    android:padding="6dp"
+                                    android:textColor="@color/colorTextPrimary"
+                                    android:textColorHint="@color/colorTextSecondary" />
+
+                                <FrameLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_vertical"
+                                    android:layout_marginBottom="16dp">
+
+                                    <EditText
+                                        android:id="@+id/mobile"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="48dp"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/rounded_edittext"
+                                        android:hint="Mobile Number"
+                                        android:inputType="phone"
+                                        android:maxLength="10"
+                                        android:gravity="center_vertical"
+                                        android:padding="6dp"
+                                        android:textColor="@color/colorTextPrimary"
+                                        android:textColorHint="@color/colorTextSecondary" />
+
+                                    <ImageView
+                                        android:id="@+id/mobile_verified_icon"
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:layout_marginEnd="6dp"
+                                        android:scaleType="fitCenter"
+                                        android:layout_gravity="end|center_vertical"
+                                        android:src="@drawable/check"
+                                        android:visibility="gone" />
+                                </FrameLayout>
+
+                            </LinearLayout>
+
+                            <!-- Profile Image -->
+                            <FrameLayout
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginHorizontal="2dp">
+
+                                <ImageView
+                                    android:id="@+id/profile_picture"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:clipToOutline="true"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/default_profile" />
+
+                                <ImageButton
+                                    android:id="@+id/btn_edit_image"
+                                    android:layout_width="32dp"
+                                    android:layout_height="32dp"
+                                    android:layout_gravity="bottom|end"
+                                    android:layout_margin="4dp"
+                                    android:background="@drawable/card_background"
+                                    android:src="@android:drawable/ic_menu_camera"
+                                    app:tint="@color/colorTextPrimary"/>
+                            </FrameLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginBottom="16dp"
+                            android:weightSum="2">
+
+                            <!-- Experience -->
+                            <EditText
+                                android:id="@+id/experience"
+                                android:layout_width="match_parent"
+                                android:layout_height="48dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/rounded_edittext"
+                                android:hint="Experience"
+                                android:inputType="number"
+                                android:maxLength="2"
+                                android:gravity="center_vertical"
+                                android:layout_marginEnd="5dp"
+                                android:padding="6dp"
+                                android:textColor="@color/colorTextPrimary"
+                                android:textColorHint="@color/colorTextSecondary" />
+
+                            <!-- Category -->
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="48dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/rounded_edittext">
+
+                                <androidx.appcompat.widget.AppCompatSpinner
+                                    android:id="@+id/category"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center_vertical"
+                                    android:paddingStart="12dp"
+                                    android:background="@android:color/transparent"
+                                    android:popupBackground="@color/colorSurface"
+                                    android:spinnerMode="dropdown"/>
+
+                                <ImageView
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+                                    android:layout_gravity="end|center_vertical"
+                                    android:layout_marginEnd="12dp"
+                                    android:src="@drawable/spinner_arrow"
+                                    android:contentDescription="Dropdown arrow" />
+                            </FrameLayout>
+
+                        </LinearLayout>
+
+                        <!-- Gender & Availability -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="16dp"
+                            android:orientation="horizontal"
+                            android:weightSum="2">
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="48dp"
+                                android:layout_weight="1"
+                                android:layout_marginEnd="5dp"
+                                android:background="@drawable/rounded_edittext">
+
+                                <androidx.appcompat.widget.AppCompatSpinner
+                                    android:id="@+id/gender"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center_vertical"
+                                    android:paddingStart="12dp"
+                                    android:background="@android:color/transparent"
+                                    android:popupBackground="@color/colorSurface"
+                                    android:spinnerMode="dropdown"/>
+
+                                <ImageView
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+                                    android:layout_gravity="end|center_vertical"
+                                    android:layout_marginEnd="12dp"
+                                    android:src="@drawable/spinner_arrow"
+                                    android:contentDescription="Dropdown arrow" />
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="48dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/rounded_edittext">
+
+                                <androidx.appcompat.widget.AppCompatSpinner
+                                    android:id="@+id/availability"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center_vertical"
+                                    android:paddingStart="12dp"
+                                    android:background="@android:color/transparent"
+                                    android:popupBackground="@color/colorSurface"
+                                    android:spinnerMode="dropdown"/>
+
+                                <ImageView
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+                                    android:layout_gravity="end|center_vertical"
+                                    android:layout_marginEnd="12dp"
+                                    android:src="@drawable/spinner_arrow"
+                                    android:contentDescription="Dropdown arrow" />
+                            </FrameLayout>
+
+                        </LinearLayout>
+
+                        <!-- Address -->
+                        <EditText
+                            android:id="@+id/current_address"
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp"
+                            android:layout_marginBottom="16dp"
+                            android:background="@drawable/rounded_edittext"
+                            android:hint="Current Address"
+                            android:inputType="textPostalAddress"
+                            android:gravity="center_vertical"
+                            android:padding="6dp"
+                            android:textColor="@color/colorTextPrimary"
+                            android:textColorHint="@color/colorTextSecondary" />
+
+                        <EditText
+                            android:id="@+id/area"
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp"
+                            android:layout_marginBottom="16dp"
+                            android:background="@drawable/rounded_edittext"
+                            android:hint="Area"
+                            android:inputType="textPostalAddress"
+                            android:gravity="center_vertical"
+                            android:padding="6dp"
+                            android:textColor="@color/colorTextPrimary"
+                            android:textColorHint="@color/colorTextSecondary" />
+
+                        <!-- Aadhar -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="16dp"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+
+                            <EditText
+                                android:id="@+id/aadhar_number"
+                                android:layout_width="0dp"
+                                android:layout_height="48dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/rounded_edittext"
+                                android:hint="Aadhar Number"
+                                android:inputType="number"
+                                android:maxLength="12"
+                                android:gravity="center_vertical"
+                                android:padding="6dp"
+                                android:textColor="@color/colorTextPrimary"
+                                android:textColorHint="@color/colorTextSecondary" />
+
+                            <CheckBox
+                                android:id="@+id/cb_verify_aadhar"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:text="Verified"
+                                android:textColor="@color/colorTextPrimary"
+                                android:contentDescription="Check to verify Aadhar"
+                                android:buttonTint="@color/colorSuccess"/>
+
+                        </LinearLayout>
+
+                        <EditText
+                            android:id="@+id/urgentCharge"
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp"
+                            android:layout_marginBottom="16dp"
+                            android:background="@drawable/rounded_edittext"
+                            android:hint="Urgent Charge (per Hour)"
+                            android:inputType="numberDecimal"
+                            android:gravity="center_vertical"
+                            android:padding="6dp"
+                            android:textColor="@color/colorTextPrimary"
+                            android:textColorHint="@color/colorTextSecondary" />
+
+                        <EditText
+                            android:id="@+id/editSalary"
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp"
+                            android:layout_marginBottom="16dp"
+                            android:background="@drawable/rounded_edittext"
+                            android:hint="Expected Salary"
+                            android:inputType="numberDecimal"
+                            android:gravity="center_vertical"
+                            android:padding="6dp"
+                            android:textColor="@color/colorTextPrimary"
+                            android:textColorHint="@color/colorTextSecondary" />
+
+                        <!-- Submit Button -->
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/submit_btn"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Register Servant"
+                            android:textColor="@color/buttonPrimaryText"
+                            android:textStyle="bold"
+                            android:backgroundTint="@color/buttonPrimaryBg"
+                            android:layout_marginTop="5dp"
+                            app:cornerRadius="10dp"
+                            android:padding="15dp"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"/>
+
+                    </LinearLayout>
+
+                </ScrollView>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <!-- Agent Profile Section -->
+        <LinearLayout
+            android:id="@+id/profileSection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginVertical="20dp"
+            android:layout_marginHorizontal="10dp"
+            android:visibility="gone"
+            android:padding="15dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Manage Your Profile"
+                android:textAlignment="center"
+                android:textColor="@color/colorTextPrimary"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="10dp" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
+                app:cardBackgroundColor="@android:color/transparent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/card_background"
+                    android:padding="20dp">
+
+                    <!-- Profile Image -->
+                    <FrameLayout
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="16dp">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/agent_profile_picture"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:clipToOutline="true"
+                            android:src="@drawable/default_profile" />
+
+                        <ImageButton
+                            android:id="@+id/btn_edit_profile_image"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_gravity="bottom|end"
+                            android:layout_margin="4dp"
+                            android:background="@drawable/card_background"
+                            android:src="@android:drawable/ic_menu_camera"
+                            app:tint="@color/colorTextPrimary" />
+                    </FrameLayout>
+
+                    <!-- Username -->
+                    <EditText
+                        android:id="@+id/editUsername"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginBottom="16dp"
+                        android:background="@drawable/rounded_edittext"
+                        android:hint="Username"
+                        android:inputType="textPersonName"
+                        android:gravity="center_vertical"
+                        android:padding="8dp"
+                        android:textColor="@color/colorTextPrimary"
+                        android:textColorHint="@color/colorTextSecondary" />
+
+                    <!-- Email -->
+                    <EditText
+                        android:id="@+id/editEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginBottom="16dp"
+                        android:background="@drawable/rounded_edittext"
+                        android:hint="Email"
+                        android:inputType="textEmailAddress"
+                        android:gravity="center_vertical"
+                        android:padding="8dp"
+                        android:textColor="@color/colorTextPrimary"
+                        android:textColorHint="@color/colorTextSecondary" />
+
+                    <!-- Mobile -->
+                    <EditText
+                        android:id="@+id/editMobile"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginBottom="16dp"
+                        android:background="@drawable/rounded_edittext"
+                        android:hint="Mobile Number"
+                        android:inputType="phone"
+                        android:maxLength="10"
+                        android:gravity="center_vertical"
+                        android:padding="8dp"
+                        android:textColor="@color/colorTextPrimary"
+                        android:textColorHint="@color/colorTextSecondary" />
+
+                    <!-- Update Button -->
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnUpdateProfile"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Update Profile"
+                        android:textColor="@color/buttonPrimaryText"
+                        android:textStyle="bold"
+                        android:backgroundTint="@color/buttonPrimaryBg"
+                        android:layout_marginTop="10dp"
+                        app:cornerRadius="10dp"
+                        android:padding="12dp"
+                        android:visibility="gone"/>
+
+                    <!-- Change Password -->
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnChangePassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Change Password"
+                        android:textColor="@color/buttonAccentText"
+                        android:textStyle="bold"
+                        android:backgroundTint="@color/buttonAccentBg"
+                        android:layout_marginTop="10dp"
+                        app:cornerRadius="10dp"
+                        android:padding="12dp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Bottom Navigation -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="2dp"
+        android:paddingBottom="5dp"
+        android:background="@color/colorSurface">
+
+        <LinearLayout
+            android:id="@+id/homeSectionSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_marginVertical="2dp"
+            android:clickable="true">
+
+                <ImageButton
+                    android:id="@+id/homeSectionButton"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/home_icon_active"
+                    android:scaleType="fitCenter"
+                    android:padding="5dp"
+                    android:background="@drawable/active_button_bg_agent"
+                    android:contentDescription="Home Section"
+                    android:visibility="visible"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dashboard"
+                android:textColor="@color/colorTextPrimary"
+                android:textSize="13sp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/registerSectionSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_marginVertical="2dp"
+            android:clickable="true">
+
+            <ImageButton
+                android:id="@+id/registerSectionButton"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:src="@drawable/register_icon_user"
+                android:scaleType="fitCenter"
+                android:background="@android:color/transparent"
+                android:contentDescription="Register Section"
+                android:visibility="visible"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Register"
+                android:textColor="@color/colorTextPrimary"
+                android:textSize="10sp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/profileSectionSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_marginVertical="2dp"
+            android:clickable="true">
+
+            <ImageButton
+                android:id="@+id/profileSectionButton"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:src="@drawable/profile_icon_user"
+                android:scaleType="fitCenter"
+                android:padding="5dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:contentDescription="Profile Section"
+                android:visibility="visible"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Profile"
+                android:textColor="@color/colorTextPrimary"
+                android:textSize="10sp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/logoutButtonSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_marginVertical="2dp"
+            android:clickable="true">
+
+            <ImageButton
+                android:id="@+id/logoutButton"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/logout_agent"
+                android:scaleType="fitCenter"
+                android:layout_gravity="center"
+                android:padding="5dp"
+                android:background="@android:color/transparent"
+                android:contentDescription="Logout"
+                android:visibility="visible"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Logout"
+                android:textColor="@color/colorTextPrimary"
+                android:textSize="10sp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

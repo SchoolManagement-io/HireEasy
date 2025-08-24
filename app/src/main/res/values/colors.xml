@@ -1,16 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- UI Element Colors -->
-    <color name="navbar_background">#5A4236</color>
-    <color name="card_background">#584034</color>
-    <color name="card_border">#D8C5A8</color>
-    <color name="main_page_background">#3B3128</color>
-    <color name="button_background">#8D6037</color>
-    <color name="footer_background">#1AFFFFFF</color> <!-- 10% opacity white -->
 
-    <!-- Text Colors -->
-    <color name="app_name_color">#D8C5A8</color>
-    <color name="text_color">#EAD5C2</color>
-    <color name="button_text_color">#DCCDB3</color>
-    <color name="heading_color">#B98A4C</color>
+    <!-- 🎨 Primary Theme Colors -->
+    <color name="colorPrimary">#007BFF</color> <!-- Royal Blue -->
+    <color name="colorPrimaryDark">#0056b3</color> <!-- Darker Blue (Status bar) -->
+    <color name="colorAccent">#FFC107</color> <!-- Amber Yellow -->
+
+    <!-- 🎨 Secondary & Supporting Colors -->
+    <color name="colorSecondary">#17A2B8</color> <!-- Teal/Cyan -->
+    <color name="colorSuccess">#28A745</color> <!-- Green for success -->
+    <color name="colorDanger">#DC3545</color> <!-- Red for danger -->
+    <color name="colorWarning">#FFC107</color> <!-- Amber for pending/status -->
+
+    <!-- 🎨 Backgrounds -->
+    <color name="colorBackground">#F8F9FA</color> <!-- App background -->
+    <color name="colorSurface">#FFFFFF</color> <!-- Cards, Inputs, Modals -->
+    <color name="colorOverlay">#80000000</color> <!-- Dialog overlay (50% black) -->
+    <color name="colorShadow">#1A000000</color> <!-- Shadow (10% black) -->
+
+    <!-- 🎨 Text Colors -->
+    <color name="colorTextPrimary">#212529</color> <!-- Main headings/text -->
+    <color name="colorTextSecondary">#6C757D</color> <!-- Subtext -->
+    <color name="colorTextInverse">#FFFFFF</color> <!-- Text on dark backgrounds -->
+
+    <!-- 🎨 Borders and Lines -->
+    <color name="colorBorder">#DEE2E6</color>
+    <color name="colorInputBorder">#CED4DA</color>
+
+    <!-- 🎨 Button States -->
+    <color name="buttonPrimaryBg">#007BFF</color>
+    <color name="buttonPrimaryText">#FFFFFF</color>
+
+    <color name="buttonSecondaryBg">#FFFFFF</color>
+    <color name="buttonSecondaryText">#007BFF</color>
+    <color name="buttonSecondaryBorder">#007BFF</color>
+
+    <color name="buttonAccentBg">#FFC107</color>
+    <color name="buttonAccentText">#212529</color>
+
+    <color name="buttonDangerBg">#DC3545</color>
+    <color name="buttonDangerText">#FFFFFF</color>
+
+    <color name="buttonDisabledBg">#DEE2E6</color>
+    <color name="buttonDisabledText">#6C757D</color>
+
+    <!-- 🎨 Role-specific Topbars -->
+    <color name="adminTopbar">#0056b3</color>
+    <color name="agentTopbar">#117A8B</color>
+    <color name="userTopbar">#FFFFFF</color>
+
+    <!-- 🎨 Role-specific Highlights -->
+    <color name="adminHighlight">#007BFF</color>
+    <color name="agentHighlight">#17A2B8</color>
+    <color name="userHighlight">#FFC107</color>
+
+    <!-- 🎨 Bottom Navigation -->
+    <color name="bottomNavActive">#007BFF</color>
+    <color name="bottomNavInactive">#6C757D</color>
+    <color name="bottomNavBg">#FFFFFF</color>
+
+    <!-- 🎨 Status Chips -->
+    <color name="statusAvailable">#28A745</color>
+    <color name="statusBusy">#DC3545</color>
+    <color name="statusPending">#FFC107</color>
+    <color name="statusApproved">#007BFF</color>
+
+    <color name="colorRipple">#33000000</color> <!-- 20% black -->
+
 </resources>
