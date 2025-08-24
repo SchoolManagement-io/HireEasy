@@ -217,7 +217,7 @@ public class PaymentPortal extends BaseActivity implements PaymentResultListener
         new Handler().postDelayed(() -> {
             try {
                 Checkout checkout = new Checkout();
-                checkout.setKeyID("rzp_test_Vr2qOPSd37LD9J");
+                checkout.setKeyID("test_api");
                 checkout.setImage(R.drawable.payment_app_logo);
                 checkout.setFullScreenDisable(true);
 
