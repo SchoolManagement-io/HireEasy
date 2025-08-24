@@ -1,0 +1,3461 @@
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_page_background">
+
+    <!-- Scrollable content -->
+    <ScrollView
+        android:id="@+id/homeSection"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:layout_marginBottom="70dp"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        android:visibility="gone"
+        android:background="@android:color/transparent">
+
+        <LinearLayout
+            android:id="@+id/mainContentLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Header and Profile Picture -->
+            <RelativeLayout
+                android:id="@+id/headerLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="8dp"
+                android:layout_marginBottom="12dp">
+
+                <TextView
+                    android:id="@+id/head"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_bolditalic"
+                    android:text="Hire Easy"
+                    android:textColor="@color/colorTextPrimary"
+                    android:textSize="26sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.05" />
+
+                <FrameLayout
+                    android:id="@+id/profileContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/profilePic"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_gravity="end"
+                        android:layout_marginEnd="8dp"
+                        android:padding="2dp"
+                        android:src="@drawable/default_profile"
+                        android:elevation="4dp"
+                        android:transitionName="profileImage" />
+
+                    <ImageView
+                        android:id="@+id/membership_button"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="end"
+                        android:layout_marginEnd="5dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/membership_button"
+                        android:visibility="gone"
+                        android:elevation="6dp"
+                        android:background="@android:color/transparent" />
+                </FrameLayout>
+            </RelativeLayout>
+
+            <!-- Greeting and Heading -->
+            <TextView
+                android:id="@+id/greet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:text="Hello, User"
+                android:textColor="@color/colorTextPrimary"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/poppins_semiboiditalic" />
+
+            <TextView
+                android:id="@+id/heading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Need Help Today?"
+                android:textColor="@color/colorTextPrimary"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/poppins_bolditalic" />
+
+            <TextView
+                android:id="@+id/subheading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Find verified domestic helpers, on-demand workers and more."
+                android:textColor="@color/colorTextSecondary"
+                android:textSize="14sp"
+                android:lineSpacingExtra="4dp"
+                android:fontFamily="@font/poppins_regular" />
+
+            <!-- Popular Services -->
+            <TextView
+                android:id="@+id/popularServicesText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="26dp"
+                android:text="Popular Services"
+                android:textSize="18sp"
+                android:textColor="@color/colorTextPrimary"
+                android:fontFamily="@font/poppins_semiboiditalic" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/popularRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="10dp"
+                android:clipToPadding="false"
+                android:overScrollMode="never"
+                android:scrollbars="none" />
+
+            <!-- Recommended Section -->
+            <TextView
+                android:id="@+id/recommendText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Recommended For You"
+                android:textSize="18sp"
+                android:textColor="@color/colorTextPrimary"
+                android:fontFamily="@font/poppins_semiboiditalic" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recommendRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:clipToPadding="false"
+                android:overScrollMode="never"
+                android:scrollbars="none"
+                android:paddingBottom="8dp" />
+
+            <!-- Unlock Button -->
+            <LinearLayout
+                android:id="@+id/layoutUnlockBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginHorizontal="20dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:background="@drawable/premium_btn_bg"
+                android:clickable="true"
+                android:elevation="3dp"
+                android:padding="12dp"
+                android:backgroundTint="@null">
+
+                <ImageButton
+                    android:id="@+id/imageUnlockBtn"
+                    android:layout_width="44dp"
+                    android:layout_height="40dp"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/premium" />
+
+                <Button
+                    android:id="@+id/unlockBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" Unlock Unlimited Access \n₹499/month"
+                    android:textColor="@color/buttonAccentText"
+                    android:textSize="15sp"
+                    android:fontFamily="@font/poppins_mediumitalic"
+                    app:backgroundTint="@android:color/transparent" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/searchSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@android:color/transparent"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/editFilter"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="Filter by Name and Area"
+            android:textSize="15sp"
+            android:background="@drawable/rounded_edittext"
+            android:textColor="@color/colorTextPrimary"
+            android:textColorHint="@color/colorTextSecondary"
+            android:padding="12dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="10dp"/>
+
+        <LinearLayout
+            android:id="@+id/filterSortContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/colorSurface"
+            android:paddingHorizontal="10dp"
+            android:layout_marginTop="5dp">
+
+            <FrameLayout
+                android:id="@+id/filterSpinnerContainer"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_edittext"
+                android:layout_marginEnd="5dp">
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/filterSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:paddingStart="12dp"
+                    android:background="@android:color/transparent"
+                    android:popupBackground="@color/colorSurface"
+                    android:spinnerMode="dropdown"/>
+
+                <ImageView
+                    android:id="@+id/filterSpinnerArrow"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="end|center_vertical"
+                    android:layout_marginEnd="12dp"
+                    android:src="@drawable/spinner_arrow"
+                    android:contentDescription="Dropdown arrow" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/sortSpinnerContainer"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_edittext"
+                android:layout_marginStart="5dp">
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/sortSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:paddingStart="12dp"
+                    android:background="@android:color/transparent"
+                    android:popupBackground="@color/colorSurface"
+                    android:spinnerMode="dropdown"/>
+
+                <ImageView
+                    android:id="@+id/sortSpinnerArrow"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="end|center_vertical"
+                    android:layout_marginEnd="12dp"
+                    android:src="@drawable/spinner_arrow"
+                    android:contentDescription="Dropdown arrow" />
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <ScrollView
+            android:id="@+id/searchScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:layout_marginBottom="70dp"
+            android:overScrollMode="never"
+            android:padding="5dp"
+            android:scrollbars="none"
+            android:visibility="visible">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/servantRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                tools:listitem="@layout/servant_list"/>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/unlockedProfilesSection"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@android:color/transparent"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/unlockedText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="You haven't unlocked any profiles yet. Unlock a profile now to access full details of any servant, including their contact information."
+            android:textSize="16sp"
+            android:paddingHorizontal="20dp"
+            android:layout_marginTop="150dp"
+            android:textColor="@color/colorTextPrimary"
+            android:background="@android:color/transparent"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:visibility="gone"/>
+
+        <ScrollView
+            android:id="@+id/unlockedContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="70dp"
+            android:overScrollMode="never"
+            android:padding="5dp"
+            android:scrollbars="none"
+            android:visibility="visible">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/servantUnlockedRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"/>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/membershipSection"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ScrollView
+            android:id="@+id/membershipScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="true"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:id="@+id/rootLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:gravity="center"
+                android:layout_marginTop="30dp">
+
+                <!-- IF PRIME MEMBERSHIP PURCHASED -->
+                <LinearLayout
+                    android:id="@+id/primePurchasedCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp"
+                    android:background="@drawable/prime_card_background"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    android:layout_marginBottom="16dp"
+                    android:elevation="4dp">
+
+                    <LinearLayout
+                        android:id="@+id/primeMemberInfoContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <LinearLayout
+                            android:id="@+id/primeMemberTextContainer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/primeMemberName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="SAMPLE NAME"
+                                android:textColor="@color/colorTextInverse"
+                                android:textSize="20sp"
+                                android:textStyle="bold"
+                                android:layout_gravity="left"/>
+
+                            <TextView
+                                android:id="@+id/primeMemberEmail"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="example@gmail.com"
+                                android:textColor="@color/colorTextInverse"
+                                android:textSize="15sp"
+                                android:layout_gravity="left"/>
+
+                        </LinearLayout>
+
+                        <FrameLayout
+                            android:id="@+id/primeMemberPhotoContainer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/primeMemberPhoto"
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:src="@drawable/default_profile"
+                                android:layout_gravity="end"/>
+
+                            <ImageView
+                                android:id="@+id/primeMembershipBadge"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:src="@drawable/membership_button"
+                                android:layout_gravity="end"/>
+
+                        </FrameLayout>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/primeMemberNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:text="1234 1234 1234 1234"
+                        android:textSize="25sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorTextInverse"
+                        android:textAlignment="center"/>
+
+                    <LinearLayout
+                        android:id="@+id/primeCardDetailsContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/primeCardChip"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/prime_card_chip"
+                            android:background="@android:color/transparent"
+                            android:layout_gravity="left|center_vertical"
+                            android:layout_margin="10dp"/>
+
+                        <TextView
+                            android:id="@+id/primeEndDate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Ending On: DD/MM/YYYY"
+                            android:textColor="@color/colorTextInverse"
+                            android:textAlignment="center"
+                            android:layout_gravity="center_vertical"
+                            tools:ignore="RtlCompat" />
+
+                    </LinearLayout>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnRenewNow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Renew >"
+                        android:backgroundTint="@color/buttonSecondaryBg"
+                        android:textColor="@color/buttonSecondaryText"
+                        android:textStyle="bold"
+                        android:paddingLeft="24dp"
+                        app:cornerRadius="15dp"
+                        android:paddingRight="24dp" />
+
+                </LinearLayout>
+
+                <!-- PRIME MEMBERSHIP CARD -->
+                <LinearLayout
+                    android:id="@+id/primeCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp"
+                    android:background="@drawable/prime_card_background"
+                    android:gravity="center"
+                    android:visibility="visible"
+                    android:layout_marginBottom="16dp"
+                    android:elevation="4dp">
+
+                    <TextView
+                        android:id="@+id/primeMembershipTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="PRIME MEMBERSHIP"
+                        android:textColor="@color/colorTextInverse"
+                        android:textSize="22sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:layout_marginBottom="12dp" />
+
+                    <TextView
+                        android:id="@+id/primeMembershipPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="₹499"
+                        android:textColor="@color/colorTextInverse"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/primeMembershipDuration"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="per Month"
+                        android:textColor="@color/colorTextInverse"
+                        android:textSize="14sp"
+                        android:layout_marginBottom="16dp" />
+
+                    <TextView
+                        android:id="@+id/primeMembershipBenefits"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="✓ Unlimited Access to All Profiles\n✓ Complete Profile Details with Contact\n✓ Verified Member Badge on Your Profile\n✓ Priority Customer Support"
+                        android:textColor="@color/colorTextInverse"
+                        android:lineSpacingExtra="6dp"
+                        android:layout_marginBottom="20dp"
+                        android:textSize="15sp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnJoinNow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Join Now"
+                        android:backgroundTint="@color/buttonSecondaryBg"
+                        android:textColor="@color/buttonSecondaryText"
+                        android:textStyle="bold"
+                        android:paddingLeft="24dp"
+                        app:cornerRadius="15dp"
+                        android:paddingRight="24dp" />
+
+                </LinearLayout>
+
+                <!-- ₹20 VIEW PROFILE CARD -->
+                <LinearLayout
+                    android:id="@+id/pay20Card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp"
+                    android:background="@drawable/pay20_card_background"
+                    android:gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:elevation="4dp">
+
+                    <TextView
+                        android:id="@+id/pay20Title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pay ₹20\nto View Profile"
+                        android:textColor="@color/colorTextPrimary"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:layout_marginBottom="12dp" />
+
+                    <TextView
+                        android:id="@+id/pay20Price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="₹20"
+                        android:textColor="@color/colorTextPrimary"
+                        android:textSize="30sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="16dp" />
+
+                    <TextView
+                        android:id="@+id/pay20Benefits"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="✓ View Full Details of One Profile\n✓ No Monthly Commitment\n✓ Quick and Instant Access\n✓ Perfect for One-Time Viewing"
+                        android:textColor="@color/colorTextPrimary"
+                        android:lineSpacingExtra="6dp"
+                        android:layout_marginBottom="20dp"
+                        android:textSize="15sp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnViewProfile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="View Profile"
+                        android:textColor="@color/buttonDangerText"
+                        android:textStyle="bold"
+                        android:paddingLeft="24dp"
+                        android:paddingRight="24dp"
+                        android:paddingTop="10dp"
+                        app:cornerRadius="15dp"
+                        android:paddingBottom="10dp"
+                        android:backgroundTint="@color/buttonDangerBg"
+                        android:elevation="2dp"/>
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/spacerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/profileSection"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="visible"
+        android:background="@android:color/transparent"
+        android:padding="15dp">
+
+        <!-- Profile Section Buttons -->
+        <ScrollView
+            android:id="@+id/profileScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="true"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:id="@+id/profileRootButtons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/yourProfileTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Your Profile"
+                    android:layout_marginTop="10dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorTextPrimary"
+                    android:textSize="15sp"/>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/profileCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:layout_marginTop="5dp"
+                    app:cardBackgroundColor="@color/colorSurface"
+                    app:cardCornerRadius="10dp"
+                    android:elevation="6dp">
+
+                    <LinearLayout
+                        android:id="@+id/profileInfoContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <FrameLayout
+                            android:id="@+id/profilePhotoContainer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/profileSectionPhoto"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/default_profile"
+                                android:layout_margin="10dp"/>
+
+                            <ImageView
+                                android:id="@+id/profileMembershipBadge"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@drawable/membership_button"
+                                android:layout_marginEnd="5dp"
+                                android:layout_gravity="end"/>
+
+                        </FrameLayout>
+
+                        <LinearLayout
+                            android:id="@+id/profileTextContainer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginStart="15dp">
+
+                            <TextView
+                                android:id="@+id/profileName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Sample Name"
+                                android:textStyle="bold"
+                                android:textColor="@color/colorTextPrimary"
+                                android:textSize="18sp"
+                                android:layout_marginBottom="5dp"/>
+
+                            <TextView
+                                android:id="@+id/profilePhone"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="987643210"
+                                android:textColor="@color/colorTextPrimary"
+                                android:textSize="14sp"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/profileArrowContainer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="end">
+
+                            <ImageButton
+                                android:id="@+id/profileArrowButton"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@drawable/right_arrow_btn"
+                                android:backgroundTint="@android:color/transparent"
+                                android:background="@android:color/transparent"
+                                android:scaleType="fitCenter"
+                                android:layout_marginEnd="10dp"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/changeEmailCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:layout_marginTop="10dp"
+                    app:cardBackgroundColor="@color/colorSurface"
+                    app:cardCornerRadius="10dp"
+                    android:elevation="6dp">
+
+                    <LinearLayout
+                        android:id="@+id/changeEmailContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/changeEmailText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Change Email"
+                            android:textStyle="bold"
+                            android:textSize="16dp"
+                            android:textColor="@color/colorTextPrimary"
+                            android:layout_margin="10dp"/>
+
+                        <LinearLayout
+                            android:id="@+id/changeEmailArrowContainer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="end">
+
+                            <ImageButton
+                                android:id="@+id/changeEmailArrowButton"
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:src="@drawable/right_arrow_btn"
+                                android:backgroundTint="@android:color/transparent"
+                                android:background="@android:color/transparent"
+                                android:scaleType="fitCenter"
+                                android:layout_marginEnd="10dp"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/changePasswordCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:layout_marginTop="10dp"
+                    app:cardBackgroundColor="@color/colorSurface"
+                    app:cardCornerRadius="10dp"
+                    android:elevation="6dp">
+
+                    <LinearLayout
+                        android:id="@+id/changePasswordContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/changePasswordText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Change Password"
+                            android:textStyle="bold"
+                            android:textSize="16dp"
+                            android:textColor="@color/colorTextPrimary"
+                            android:layout_margin="10dp"/>
+
+                        <LinearLayout
+                            android:id="@+id/changePasswordArrowContainer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="end">
+
+                            <ImageButton
+                                android:id="@+id/changePasswordArrowButton"
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:src="@drawable/right_arrow_btn"
+                                android:backgroundTint="@android:color/transparent"
+                                android:background="@android:color/transparent"
+                                android:scaleType="fitCenter"
+                                android:layout_marginEnd="10dp"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/logoutButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:layout_marginTop="10dp"
+                    app:cardBackgroundColor="@color/colorSurface"
+                    app:cardCornerRadius="10dp"
+                    android:elevation="6dp"
+                    android:clickable="true">
+
+                    <LinearLayout
+                        android:id="@+id/logoutContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/logoutText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Logout"
+                            android:textStyle="bold"
+                            android:textSize="16dp"
+                            android:textColor="@color/colorDanger"
+                            android:layout_margin="10dp"/>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/appSettingsTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="App Settings"
+                    android:layout_marginTop="20dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorTextPrimary"
+                    android:textSize="15sp"/>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/notificationsCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:layout_marginTop="10dp"
+                    app:cardBackgroundColor="@color/colorSurface"
+                    app:cardCornerRadius="10dp"
+                    android:elevation="6dp">
+
+                    <LinearLayout
+                        android:id="@+id/notificationsContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/notificationsText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Notifications"
+                            android:textStyle="bold"
+                            android:textSize="16dp"
+                            android:textColor="@color/colorTextPrimary"
+                            android:layout_margin="10dp"/>
+
+                        <LinearLayout
+                            android:id="@+id/notificationsSwitchContainer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="end">
+
+                            <Switch
+                                android:id="@+id/notificationsSwitch"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@android:color/transparent"
+                                tools:ignore="UseSwitchCompatOrMaterialXml"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/darkModeCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:layout_marginTop="10dp"
+                    app:cardBackgroundColor="@color/colorSurface"
+                    app:cardCornerRadius="10dp"
+                    android:elevation="6dp">
+
+                    <LinearLayout
+                        android:id="@+id/darkModeContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/darkModeText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Dark Mode"
+                            android:textStyle="bold"
+                            android:textSize="16dp"
+                            android:textColor="@color/colorTextPrimary"
+                            android:layout_margin="10dp"/>
+
+                        <LinearLayout
+                            android:id="@+id/darkModeSwitchContainer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="end">
+
+                            <Switch
+                                android:id="@+id/darkModeSwitch"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@android:color/transparent"
+                                tools:ignore="UseSwitchCompatOrMaterialXml"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/accountControlsTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Account Controls"
+                    android:layout_marginTop="20dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorTextPrimary"
+                    android:textSize="15sp"/>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/privacyOptionsCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:layout_marginTop="10dp"
+                    app:cardBackgroundColor="@color/colorSurface"
+                    app:cardCornerRadius="10dp"
+                    android:elevation="6dp">
+
+                    <LinearLayout
+                        android:id="@+id/privacyOptionsContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/privacyOptionsText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Privacy Options"
+                            android:textStyle="bold"
+                            android:textSize="16dp"
+                            android:textColor="@color/colorTextPrimary"
+                            android:layout_margin="10dp"/>
+
+                        <LinearLayout
+                            android:id="@+id/privacyOptionsArrowContainer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="end">
+
+                            <ImageButton
+                                android:id="@+id/privacyOptionsArrowButton"
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:src="@drawable/right_arrow_btn"
+                                android:backgroundTint="@android:color/transparent"
+                                android:background="@android:color/transparent"
+                                android:scaleType="fitCenter"
+                                android:layout_marginEnd="10dp"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/deleteAccountCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:layout_marginTop="10dp"
+                    app:cardBackgroundColor="@color/colorSurface"
+                    app:cardCornerRadius="10dp"
+                    android:elevation="6dp">
+
+                    <LinearLayout
+                        android:id="@+id/deleteAccountContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/deleteAccountText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Delete Account"
+                            android:textStyle="bold"
+                            android:textSize="16dp"
+                            android:textColor="@color/colorDanger"
+                            android:layout_margin="10dp"/>
+
+                        <LinearLayout
+                            android:id="@+id/deleteAccountArrowContainer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="end">
+
+                            <ImageButton
+                                android:id="@+id/deleteAccountArrowButton"
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:src="@drawable/right_arrow_btn"
+                                android:backgroundTint="@android:color/transparent"
+                                android:background="@android:color/transparent"
+                                android:scaleType="fitCenter"
+                                android:layout_marginEnd="10dp"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/paymentsTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Payments"
+                    android:layout_marginTop="20dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorTextPrimary"
+                    android:textSize="15sp"/>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/paymentHistoryCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:layout_marginTop="10dp"
+                    app:cardBackgroundColor="@color/colorSurface"
+                    app:cardCornerRadius="10dp"
+                    android:elevation="6dp">
+
+                    <LinearLayout
+                        android:id="@+id/paymentHistoryCardContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/paymentHistoryText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Payment History"
+                            android:textStyle="bold"
+                            android:textSize="16dp"
+                            android:textColor="@color/colorTextPrimary"
+                            android:layout_margin="10dp"/>
+
+                        <LinearLayout
+                            android:id="@+id/paymentHistoryArrowContainer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="end">
+
+                            <ImageButton
+                                android:id="@+id/paymentHistoryArrowButton"
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:src="@drawable/right_arrow_btn"
+                                android:backgroundTint="@android:color/transparent"
+                                android:background="@android:color/transparent"
+                                android:scaleType="fitCenter"
+                                android:layout_marginEnd="10dp"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/primeMembershipCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:layout_marginTop="10dp"
+                    app:cardBackgroundColor="@color/colorSurface"
+                    app:cardCornerRadius="10dp"
+                    android:elevation="6dp">
+
+                    <LinearLayout
+                        android:id="@+id/primeMembershipContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/primeMembershipText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Prime Membership"
+                            android:textStyle="bold"
+                            android:textSize="16dp"
+                            android:textColor="@color/colorTextPrimary"
+                            android:layout_margin="10dp"/>
+
+                        <LinearLayout
+                            android:id="@+id/primeMembershipArrowContainer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="end">
+
+                            <ImageButton
+                                android:id="@+id/primeMembershipArrowButton"
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:src="@drawable/right_arrow_btn"
+                                android:backgroundTint="@android:color/transparent"
+                                android:background="@android:color/transparent"
+                                android:scaleType="fitCenter"
+                                android:layout_marginEnd="10dp"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/unlockedProfilesDetailsCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:layout_marginTop="10dp"
+                    app:cardBackgroundColor="@color/colorSurface"
+                    app:cardCornerRadius="10dp"
+                    android:elevation="6dp">
+
+                    <LinearLayout
+                        android:id="@+id/unlockedProfilesDetailsCardContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/unlockedProfilesDetailsText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Unlocked Profiles Details"
+                            android:textStyle="bold"
+                            android:textSize="16dp"
+                            android:textColor="@color/colorTextPrimary"
+                            android:layout_margin="10dp"/>
+
+                        <LinearLayout
+                            android:id="@+id/unlockedProfilesDetailsArrowContainer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="end">
+
+                            <ImageButton
+                                android:id="@+id/unlockedProfilesDetailsArrowButton"
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:src="@drawable/right_arrow_btn"
+                                android:backgroundTint="@android:color/transparent"
+                                android:background="@android:color/transparent"
+                                android:scaleType="fitCenter"
+                                android:layout_marginEnd="10dp"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/helpLegalTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Help &amp; Legal"
+                    android:layout_marginTop="20dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorTextPrimary"
+                    android:textSize="15sp"/>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/helpSupportCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:layout_marginTop="10dp"
+                    app:cardBackgroundColor="@color/colorSurface"
+                    app:cardCornerRadius="10dp"
+                    android:elevation="6dp">
+
+                    <LinearLayout
+                        android:id="@+id/helpSupportContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/helpSupportText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Help &amp; Support"
+                            android:textStyle="bold"
+                            android:textSize="16dp"
+                            android:textColor="@color/colorTextPrimary"
+                            android:layout_margin="10dp"
+                            tools:ignore="HardcodedText" />
+
+                        <LinearLayout
+                            android:id="@+id/helpSupportArrowContainer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="end">
+
+                            <ImageButton
+                                android:id="@+id/helpSupportArrowButton"
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:src="@drawable/right_arrow_btn"
+                                android:backgroundTint="@android:color/transparent"
+                                android:background="@android:color/transparent"
+                                android:scaleType="fitCenter"
+                                android:layout_marginEnd="10dp"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/termsConditionsCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:layout_marginTop="10dp"
+                    app:cardBackgroundColor="@color/colorSurface"
+                    app:cardCornerRadius="10dp"
+                    android:elevation="6dp">
+
+                    <LinearLayout
+                        android:id="@+id/termsConditionsCardContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/termsConditionsText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Terms &amp; Conditions"
+                            android:textStyle="bold"
+                            android:textSize="16dp"
+                            android:textColor="@color/colorTextPrimary"
+                            android:layout_margin="10dp"/>
+
+                        <LinearLayout
+                            android:id="@+id/termsConditionsArrowContainer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="end">
+
+                            <ImageButton
+                                android:id="@+id/termsConditionsArrowButton"
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:src="@drawable/right_arrow_btn"
+                                android:backgroundTint="@android:color/transparent"
+                                android:background="@android:color/transparent"
+                                android:scaleType="fitCenter"
+                                android:layout_marginEnd="10dp"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <View
+                    android:id="@+id/profileSpacerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="@android:color/transparent"/>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <!-- Manage Your Profile -->
+        <LinearLayout
+            android:id="@+id/manageProfileSection"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/manageProfileHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <ImageButton
+                    android:id="@+id/manageProfileBackButton"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:backgroundTint="@android:color/transparent"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/back_btn"
+                    android:scaleType="fitCenter"
+                    android:layout_marginEnd="10dp"/>
+
+                <TextView
+                    android:id="@+id/manageProfileTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Manage Your Profile"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:textColor="@color/colorTextPrimary"
+                    android:textAlignment="center"/>
+
+            </LinearLayout>
+
+            <!-- Card -->
+            <LinearLayout
+                android:id="@+id/profileCardContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp"
+                android:layout_marginTop="50dp"
+                android:background="@drawable/card_background">
+
+                <!-- Profile Image -->
+                <FrameLayout
+                    android:id="@+id/profileImageContainer"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="16dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/update_profile_picture"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:clipToOutline="true"
+                        android:src="@drawable/default_profile"/>
+
+                    <ImageButton
+                        android:id="@+id/btn_edit_image"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_gravity="bottom|end"
+                        android:layout_margin="4dp"
+                        android:src="@drawable/camera"
+                        android:padding="5dp"
+                        android:scaleType="fitCenter"
+                        android:background="@drawable/card_background"/>
+
+                </FrameLayout>
+
+                <EditText
+                    android:id="@+id/tvName"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginBottom="16dp"
+                    android:hint="Name"
+                    android:background="@drawable/rounded_edittext"
+                    android:inputType="textPersonName"
+                    android:textColorHint="@color/colorTextSecondary"
+                    android:textColor="@color/colorTextPrimary"
+                    android:padding="12dp"/>
+
+                <LinearLayout
+                    android:id="@+id/mobileContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/rounded_edittext">
+
+                    <EditText
+                        android:id="@+id/mobile"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:hint="Mobile Number"
+                        android:inputType="phone"
+                        android:maxLength="10"
+                        android:padding="12dp"
+                        android:background="@null"
+                        android:textColorHint="@color/colorTextSecondary"
+                        android:textColor="@color/colorTextPrimary"/>
+
+                    <ImageView
+                        android:id="@+id/mobile_verified_icon"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/check"
+                        android:visibility="gone"
+                        android:scaleType="fitCenter"
+                        android:layout_marginEnd="10dp"/>
+
+                </LinearLayout>
+
+                <!-- Aadhaar -->
+                <EditText
+                    android:id="@+id/aadhar_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:hint="Aadhaar Number"
+                    android:inputType="number"
+                    android:maxLength="12"
+                    android:padding="12dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/rounded_edittext"
+                    android:textColorHint="@color/colorTextSecondary"
+                    android:textColor="@color/colorTextPrimary"/>
+
+                <!-- Submit Button -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/update_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/buttonPrimaryBg"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Update Profile"
+                    android:textColor="@color/buttonPrimaryText"
+                    android:textSize="16sp"
+                    app:cornerRadius="10dp"
+                    android:textStyle="bold"
+                    android:padding="12dp"
+                    tools:ignore="HardcodedText"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Change Your Email -->
+        <LinearLayout
+            android:id="@+id/changeEmailSection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/changeEmailHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <ImageButton
+                    android:id="@+id/changeEmailBackButton"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:backgroundTint="@android:color/transparent"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/back_btn"
+                    android:scaleType="fitCenter"
+                    android:layout_marginEnd="10dp"/>
+
+                <TextView
+                    android:id="@+id/changeEmailTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Change Email"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorTextPrimary"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/changeEmailInstruction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="60dp"
+                android:text="You have to verify your new email to change your email."
+                android:textColor="@color/colorTextPrimary"
+                android:layout_gravity="center_horizontal"/>
+
+            <FrameLayout
+                android:id="@+id/oldEmailContainer"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/rounded_edittext">
+
+                <EditText
+                    android:id="@+id/oldEmailInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="12dp"
+                    android:hint="Old Email"
+                    android:background="@android:color/transparent"
+                    android:textColorHint="@color/colorTextSecondary"
+                    android:textColor="@color/colorTextPrimary"/>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/newEmailContainer"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/rounded_edittext">
+
+                <EditText
+                    android:id="@+id/newEmailInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="12dp"
+                    android:hint="New Email"
+                    android:background="@android:color/transparent"
+                    android:textColorHint="@color/colorTextSecondary"
+                    android:textColor="@color/colorTextPrimary"/>
+
+                <Button
+                    android:id="@+id/sendOtpButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorTextPrimary"
+                    android:text="Send OTP"
+                    android:padding="5dp"
+                    android:layout_gravity="end|center_vertical"
+                    android:backgroundTint="@android:color/transparent"
+                    android:visibility="visible"/>
+
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/otpTimer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00:00"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="end"
+                android:layout_marginEnd="15dp"
+                android:visibility="visible"/>
+
+            <FrameLayout
+                android:id="@+id/otpInputContainer"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/rounded_edittext"
+                android:visibility="visible">
+
+                <EditText
+                    android:id="@+id/otpInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="12dp"
+                    android:hint="New Email"
+                    android:background="@android:color/transparent"
+                    android:textColorHint="@color/colorTextSecondary"
+                    android:textColor="@color/colorTextPrimary"/>
+
+                <Button
+                    android:id="@+id/resendOtpButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorDanger"
+                    android:text="Resend"
+                    android:padding="5dp"
+                    android:backgroundTint="@android:color/transparent"
+                    android:layout_gravity="end|center_vertical"
+                    android:visibility="visible"/>
+
+            </FrameLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/updateEmailButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Update Email"
+                android:textColor="@color/buttonAccentText"
+                android:backgroundTint="@color/buttonAccentBg"
+                app:cornerRadius="10dp"
+                android:padding="10dp"
+                android:layout_marginTop="20dp"/>
+
+        </LinearLayout>
+
+        <!-- Change Your Password -->
+        <LinearLayout
+            android:id="@+id/changePasswordSection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/changePasswordHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <ImageButton
+                    android:id="@+id/changePasswordBackButton"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:backgroundTint="@android:color/transparent"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/back_btn"
+                    android:scaleType="fitCenter"
+                    android:layout_marginEnd="10dp"/>
+
+                <TextView
+                    android:id="@+id/changePasswordTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Change Password"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorTextPrimary"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/changePasswordInstruction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="60dp"
+                android:text="You have to enter your old password to change your password."
+                android:textColor="@color/colorTextPrimary"
+                android:textAlignment="center"
+                android:layout_gravity="center_horizontal"/>
+
+            <FrameLayout
+                android:id="@+id/oldPasswordContainer"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/rounded_edittext">
+
+                <EditText
+                    android:id="@+id/oldPasswordInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="12dp"
+                    android:hint="Old Password"
+                    android:background="@android:color/transparent"
+                    android:textColorHint="@color/colorTextSecondary"
+                    android:textColor="@color/colorTextPrimary"/>
+
+                <ImageButton
+                    android:id="@+id/oldPasswordToggle"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:textColor="@color/colorTextPrimary"
+                    android:src="@drawable/eye"
+                    android:layout_gravity="end|center_vertical"
+                    android:layout_marginEnd="10dp"
+                    android:background="@android:color/transparent"
+                    android:visibility="visible"/>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/newPasswordContainer"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/rounded_edittext">
+
+                <EditText
+                    android:id="@+id/newPasswordInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="12dp"
+                    android:hint="New Password"
+                    android:background="@android:color/transparent"
+                    android:textColorHint="@color/colorTextSecondary"
+                    android:textColor="@color/colorTextPrimary"/>
+
+                <ImageButton
+                    android:id="@+id/newPasswordToggle"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:textColor="@color/colorTextPrimary"
+                    android:src="@drawable/eye"
+                    android:layout_gravity="end|center_vertical"
+                    android:layout_marginEnd="10dp"
+                    android:background="@android:color/transparent"
+                    android:visibility="visible"/>
+
+            </FrameLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/updatePasswordButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Update Password"
+                android:textColor="@color/buttonAccentText"
+                android:backgroundTint="@color/buttonAccentBg"
+                app:cornerRadius="10dp"
+                android:padding="10dp"
+                android:layout_marginTop="20dp"/>
+
+        </LinearLayout>
+
+        <!-- Privacy Options Section -->
+        <LinearLayout
+            android:id="@+id/privacyOptionsSection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/privacyOptionsHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <ImageButton
+                    android:id="@+id/privacyOptionsBackButton"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:backgroundTint="@android:color/transparent"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/back_btn"
+                    android:scaleType="fitCenter"
+                    android:layout_marginEnd="10dp"/>
+
+                <TextView
+                    android:id="@+id/privacyOptionsTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Privacy Options"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorTextPrimary"/>
+
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/allowScreenshotCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:layout_marginTop="20dp"
+                app:cardBackgroundColor="@color/colorSurface"
+                app:cardCornerRadius="10dp"
+                android:elevation="6dp">
+
+                <LinearLayout
+                    android:id="@+id/allowScreenshotContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/allowScreenshotText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Allow Screenshot of Profile"
+                        android:textStyle="bold"
+                        android:textSize="16dp"
+                        android:textColor="@color/colorTextPrimary"
+                        android:layout_margin="10dp"/>
+
+                    <LinearLayout
+                        android:id="@+id/allowScreenshotSwitchContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="end">
+
+                        <Switch
+                            android:id="@+id/allowScreenshotSwitch"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+                            tools:ignore="UseSwitchCompatOrMaterialXml"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/showProfileCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:layout_marginTop="10dp"
+                app:cardBackgroundColor="@color/colorSurface"
+                app:cardCornerRadius="10dp"
+                android:elevation="6dp">
+
+                <LinearLayout
+                    android:id="@+id/showProfileContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/showProfileText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Show Profile to Others"
+                        android:textStyle="bold"
+                        android:textSize="16dp"
+                        android:textColor="@color/colorTextPrimary"
+                        android:layout_margin="10dp"/>
+
+                    <LinearLayout
+                        android:id="@+id/showProfileSwitchContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="end">
+
+                        <Switch
+                            android:id="@+id/showProfileSwitch"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+                            tools:ignore="UseSwitchCompatOrMaterialXml"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/allowDataUsageCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:layout_marginTop="10dp"
+                app:cardBackgroundColor="@color/colorSurface"
+                app:cardCornerRadius="10dp"
+                android:elevation="6dp">
+
+                <LinearLayout
+                    android:id="@+id/allowDataUsageContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/allowDataUsageText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Allow HireEasy to use data"
+                        android:textStyle="bold"
+                        android:textSize="16dp"
+                        android:textColor="@color/colorTextPrimary"
+                        android:layout_margin="10dp"/>
+
+                    <LinearLayout
+                        android:id="@+id/allowDataUsageSwitchContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="end">
+
+                        <Switch
+                            android:id="@+id/allowDataUsageSwitch"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+                            tools:ignore="UseSwitchCompatOrMaterialXml"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/vibrateOnUnlockCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:layout_marginTop="10dp"
+                app:cardBackgroundColor="@color/colorSurface"
+                app:cardCornerRadius="10dp"
+                android:elevation="6dp">
+
+                <LinearLayout
+                    android:id="@+id/vibrateOnUnlockContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/vibrateOnUnlockText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Vibrate on Unlock Profile"
+                        android:textStyle="bold"
+                        android:textSize="16dp"
+                        android:textColor="@color/colorTextPrimary"
+                        android:layout_margin="10dp"/>
+
+                    <LinearLayout
+                        android:id="@+id/vibrateOnUnlockSwitchContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="end">
+
+                        <Switch
+                            android:id="@+id/vibrateOnUnlockSwitch"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+                            tools:ignore="UseSwitchCompatOrMaterialXml"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+        <!-- Delete Account Warning -->
+        <LinearLayout
+            android:id="@+id/deleteAccountSection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/deleteAccountHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <ImageButton
+                    android:id="@+id/deleteAccountBackButton"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:backgroundTint="@android:color/transparent"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/back_btn"
+                    android:scaleType="fitCenter"
+                    android:layout_marginEnd="10dp"/>
+
+                <TextView
+                    android:id="@+id/deleteAccountTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Delete Your Account"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorTextPrimary"/>
+
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/deleteAccountWarningCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:layout_marginTop="20dp"
+                app:cardBackgroundColor="@color/colorSurface"
+                app:cardCornerRadius="10dp"
+                android:elevation="6dp">
+
+                <LinearLayout
+                    android:id="@+id/deleteAccountWarningContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/deleteAccountWarningText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Your request to delete your HireEasy account has been received.\n For your security and convenience, your account will be permanently deleted after 7 days from the date of this request.\n \n During this 7-day window: \n - You will not be visible to other users.\n - You will not be able to unlock or contact any servant profiles.\n - If you change your mind, you can cancel this deletion anytime by login into your account.\n \n This step is irreversible once the 7-day period ends. All your profile information, unlock history, and preferences will be permanently removed.\n \n Are you sure you want to proceed?"
+                        android:textSize="14dp"
+                        android:textColor="@color/colorTextPrimary"
+                        android:layout_margin="10dp"/>
+
+                    <Button
+                        android:id="@+id/confirmDeleteButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" Delete Account"
+                        android:textColor="@color/colorDanger"
+                        android:textSize="16dp"
+                        android:padding="6dp"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+        <!-- View Your Transaction History -->
+        <LinearLayout
+            android:id="@+id/paymentHistorySection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/paymentHistoryHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <ImageButton
+                    android:id="@+id/paymentHistoryBackButton"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:backgroundTint="@android:color/transparent"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/back_btn"
+                    android:scaleType="fitCenter"
+                    android:layout_marginEnd="10dp"/>
+
+                <TextView
+                    android:id="@+id/paymentHistoryTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Payment History"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorTextPrimary"/>
+
+            </LinearLayout>
+
+            <ScrollView
+                android:id="@+id/paymentHistoryScrollView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:scrollbars="none"
+                android:fillViewport="true">
+
+                <LinearLayout
+                    android:id="@+id/paymentHistoryContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/paymentHistoryRecyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="visible"
+                        tools:listitem="@layout/payment_history"/>
+
+                    <View
+                        android:id="@+id/paymentHistorySpacer"
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:background="@android:color/transparent"/>
+
+                </LinearLayout>
+
+            </ScrollView>
+
+            <TextView
+                android:id="@+id/noPaymentHistoryText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="100dp"
+                android:text="This account has no recorded transaction."
+                android:textSize="16dp"
+                android:textColor="@color/colorTextPrimary"
+                android:textAlignment="center"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+
+        <!-- View Your Membership History -->
+        <LinearLayout
+            android:id="@+id/membershipHistorySection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/membershipHistoryHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <ImageButton
+                    android:id="@+id/membershipHistoryBackButton"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:backgroundTint="@android:color/transparent"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/back_btn"
+                    android:scaleType="fitCenter"
+                    android:layout_marginEnd="10dp"/>
+
+                <TextView
+                    android:id="@+id/membershipHistoryTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Membership History"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorTextPrimary"/>
+
+            </LinearLayout>
+
+            <ScrollView
+                android:id="@+id/membershipHistoryScrollView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:scrollbars="none"
+                android:fillViewport="true">
+
+                <LinearLayout
+                    android:id="@+id/membershipHistoryContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/membershipHistoryRecyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="visible"
+                        tools:listitem="@layout/membership_history"/>
+
+                    <View
+                        android:id="@+id/membershipHistorySpacer"
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:background="@android:color/transparent"/>
+
+                </LinearLayout>
+
+            </ScrollView>
+
+            <TextView
+                android:id="@+id/noMembershipHistoryText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="100dp"
+                android:text="This account has no recorded transaction for membership."
+                android:textSize="16dp"
+                android:textColor="@color/colorTextPrimary"
+                android:textAlignment="center"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+
+        <!-- View Your Unlocked Profile History -->
+        <LinearLayout
+            android:id="@+id/unlockedProfilesDetailsSection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/unlockedProfilesDetailsHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <ImageButton
+                    android:id="@+id/unlockedProfilesDetailsBackButton"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:backgroundTint="@android:color/transparent"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/back_btn"
+                    android:scaleType="fitCenter"
+                    android:layout_marginEnd="10dp"/>
+
+                <TextView
+                    android:id="@+id/unlockedProfilesDetailsTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Unlocked Profile Details"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorTextPrimary"/>
+
+            </LinearLayout>
+
+            <ScrollView
+                android:id="@+id/unlockedProfilesDetailsScrollView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:scrollbars="none"
+                android:fillViewport="true">
+
+                <LinearLayout
+                    android:id="@+id/unlockedProfilesDetailsContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/unlockedProfilesDetailsRecyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="visible"
+                        tools:listitem="@layout/unlocked_profiles_details"/>
+
+                    <View
+                        android:id="@+id/unlockedProfilesDetailsSpacer"
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:background="@android:color/transparent"/>
+
+                </LinearLayout>
+
+            </ScrollView>
+
+            <TextView
+                android:id="@+id/noUnlockedProfilesText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="100dp"
+                android:text="No unlocked profile history."
+                android:textSize="16dp"
+                android:textColor="@color/colorTextPrimary"
+                android:textAlignment="center"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+
+        <!-- Help & Support -->
+        <LinearLayout
+            android:id="@+id/helpSupportSection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/helpSupportHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <ImageButton
+                    android:id="@+id/helpSupportBackButton"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:backgroundTint="@android:color/transparent"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/back_btn"
+                    android:scaleType="fitCenter"
+                    android:layout_marginEnd="10dp"/>
+
+                <TextView
+                    android:id="@+id/helpSupportTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Help &amp; Support"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorTextPrimary"/>
+
+            </LinearLayout>
+
+            <ScrollView
+                android:id="@+id/helpSupportScrollView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:scrollbars="none"
+                android:fillViewport="true">
+
+                <LinearLayout
+                    android:id="@+id/helpSupportContainer2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/faqTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="📌 Frequently Asked Questions (FAQs)"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:textColor="@color/colorTextPrimary"/>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/whatIsHireEasyCard"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        app:cardBackgroundColor="@color/colorSurface"
+                        app:cardCornerRadius="10dp"
+                        android:elevation="6dp">
+
+                        <LinearLayout
+                            android:id="@+id/whatIsHireEasyContainer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <LinearLayout
+                                android:id="@+id/whatIsHireEasyHeader"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical">
+
+                                <TextView
+                                    android:id="@+id/whatIsHireEasyText"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="What is HireEasy?"
+                                    android:textStyle="bold"
+                                    android:textSize="16sp"
+                                    android:textColor="@color/colorTextPrimary"
+                                    android:layout_margin="10dp"/>
+
+                                <LinearLayout
+                                    android:id="@+id/whatIsHireEasyArrowContainer"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="end">
+
+                                    <ImageButton
+                                        android:id="@+id/whatIsHireEasyArrow"
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:src="@drawable/down_arrow_btn"
+                                        android:backgroundTint="@android:color/transparent"
+                                        android:background="@android:color/transparent"
+                                        android:scaleType="fitCenter"
+                                        android:layout_marginEnd="10dp"/>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/whatIsHireEasyDescription"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="15dp"
+                                android:layout_marginEnd="25dp"
+                                android:layout_marginBottom="5dp"
+                                android:text="HireEasy is your one-stop solution to find trusted domestic help like maids, drivers, cooks, and more. We provide verified profiles at just ₹20, with no hidden costs or risks. Fast. Safe. Reliable."
+                                android:textSize="16sp"
+                                android:textColor="@color/colorTextSecondary"
+                                android:visibility="gone"/>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/howToHireCard"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        app:cardBackgroundColor="@color/colorSurface"
+                        app:cardCornerRadius="10dp"
+                        android:elevation="6dp">
+
+                        <LinearLayout
+                            android:id="@+id/howToHireContainer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <LinearLayout
+                                android:id="@+id/howToHireHeader"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical">
+
+                                <TextView
+                                    android:id="@+id/howToHireText"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="How do I hire a servant?"
+                                    android:textStyle="bold"
+                                    android:textSize="16sp"
+                                    android:textColor="@color/colorTextPrimary"
+                                    android:layout_margin="10dp"/>
+
+                                <LinearLayout
+                                    android:id="@+id/howToHireArrowContainer"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="end">
+
+                                    <ImageButton
+                                        android:id="@+id/howToHireArrow"
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:src="@drawable/down_arrow_btn"
+                                        android:backgroundTint="@android:color/transparent"
+                                        android:background="@android:color/transparent"
+                                        android:scaleType="fitCenter"
+                                        android:layout_marginEnd="10dp"/>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/howToHireDescription"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="15dp"
+                                android:layout_marginEnd="25dp"
+                                android:layout_marginBottom="5dp"
+                                android:text="Go to your interested profile > click 'View profile' > pay ₹20 to access mobile number and address."
+                                android:textSize="16sp"
+                                android:textColor="@color/colorTextSecondary"
+                                android:visibility="gone"/>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/contactServantCard"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        app:cardBackgroundColor="@color/colorSurface"
+                        app:cardCornerRadius="10dp"
+                        android:elevation="6dp">
+
+                        <LinearLayout
+                            android:id="@+id/contactServantContainer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <LinearLayout
+                                android:id="@+id/contactServantHeader"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical">
+
+                                <TextView
+                                    android:id="@+id/contactServantText"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="How can I contact a servant?"
+                                    android:textStyle="bold"
+                                    android:textSize="16sp"
+                                    android:textColor="@color/colorTextPrimary"
+                                    android:layout_margin="10dp"/>
+
+                                <LinearLayout
+                                    android:id="@+id/contactServantArrowContainer"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="end">
+
+                                    <ImageButton
+                                        android:id="@+id/contactServantArrow"
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:src="@drawable/down_arrow_btn"
+                                        android:backgroundTint="@android:color/transparent"
+                                        android:background="@android:color/transparent"
+                                        android:scaleType="fitCenter"
+                                        android:layout_marginEnd="10dp"/>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/contactServantDescription"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="15dp"
+                                android:layout_marginEnd="25dp"
+                                android:layout_marginBottom="5dp"
+                                android:text="After unlocking, you will see their mobile number and contact them directly."
+                                android:textSize="16sp"
+                                android:textColor="@color/colorTextSecondary"
+                                android:visibility="gone"/>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/refundPolicyCard"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        app:cardBackgroundColor="@color/colorSurface"
+                        app:cardCornerRadius="10dp"
+                        android:elevation="6dp">
+
+                        <LinearLayout
+                            android:id="@+id/refundPolicyContainer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <LinearLayout
+                                android:id="@+id/refundPolicyHeader"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical">
+
+                                <TextView
+                                    android:id="@+id/refundPolicyText"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Is there a refund if the profile is inactive?"
+                                    android:textStyle="bold"
+                                    android:textSize="16sp"
+                                    android:textColor="@color/colorTextPrimary"
+                                    android:layout_margin="10dp"/>
+
+                                <LinearLayout
+                                    android:id="@+id/refundPolicyArrowContainer"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="end">
+
+                                    <ImageButton
+                                        android:id="@+id/refundPolicyArrow"
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:src="@drawable/down_arrow_btn"
+                                        android:backgroundTint="@android:color/transparent"
+                                        android:background="@android:color/transparent"
+                                        android:scaleType="fitCenter"
+                                        android:layout_marginEnd="10dp"/>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/refundPolicyDescription"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="15dp"
+                                android:layout_marginEnd="25dp"
+                                android:layout_marginBottom="5dp"
+                                android:text="No, all payments are non-refundable. You may report the profile if it's inactive."
+                                android:textSize="16sp"
+                                android:textColor="@color/colorTextSecondary"
+                                android:visibility="gone"/>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/feedbackCard"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        app:cardBackgroundColor="@color/colorSurface"
+                        app:cardCornerRadius="10dp"
+                        android:elevation="6dp">
+
+                        <LinearLayout
+                            android:id="@+id/feedbackContainer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <LinearLayout
+                                android:id="@+id/feedbackHeader"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical">
+
+                                <TextView
+                                    android:id="@+id/feedbackText"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="How do I give feedback or complaints?"
+                                    android:textStyle="bold"
+                                    android:textSize="16sp"
+                                    android:textColor="@color/colorTextPrimary"
+                                    android:layout_margin="10dp"/>
+
+                                <LinearLayout
+                                    android:id="@+id/feedbackArrowContainer"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="end">
+
+                                    <ImageButton
+                                        android:id="@+id/feedbackArrow"
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:src="@drawable/down_arrow_btn"
+                                        android:backgroundTint="@android:color/transparent"
+                                        android:background="@android:color/transparent"
+                                        android:scaleType="fitCenter"
+                                        android:layout_marginEnd="10dp"/>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/feedbackDescription"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="15dp"
+                                android:layout_marginEnd="25dp"
+                                android:layout_marginBottom="5dp"
+                                android:text="Use the 'Send Feedback' option in the main menu or email us at [hireesay1@gmail.com]."
+                                android:textSize="16sp"
+                                android:textColor="@color/colorTextSecondary"
+                                android:visibility="gone"/>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <View
+                        android:id="@+id/helpSupportSpacer"
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:background="@android:color/transparent"/>
+
+                </LinearLayout>
+
+            </ScrollView>
+
+        </LinearLayout>
+
+        <!-- Terms & Conditions -->
+        <LinearLayout
+            android:id="@+id/termsConditionsSection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/termsConditionsHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <ImageButton
+                    android:id="@+id/termsConditionsBackButton"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:backgroundTint="@android:color/transparent"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/back_btn"
+                    android:scaleType="fitCenter"
+                    android:layout_marginEnd="10dp"/>
+
+                <TextView
+                    android:id="@+id/termsConditionsTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Terms &amp; Conditions"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorTextPrimary"/>
+
+            </LinearLayout>
+
+            <ScrollView
+                android:id="@+id/termsConditionsScrollView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:scrollbars="none"
+                android:fillViewport="true">
+
+                <LinearLayout
+                    android:id="@+id/termsConditionsContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/userResponsibilitiesCard"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        app:cardBackgroundColor="@color/colorSurface"
+                        app:cardCornerRadius="10dp"
+                        android:elevation="6dp">
+
+                        <LinearLayout
+                            android:id="@+id/userResponsibilitiesContainer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <LinearLayout
+                                android:id="@+id/userResponsibilitiesHeader"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical">
+
+                                <TextView
+                                    android:id="@+id/userResponsibilitiesText"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="User Responsibilities"
+                                    android:textStyle="bold"
+                                    android:textSize="16sp"
+                                    android:textColor="@color/colorTextPrimary"
+                                    android:layout_margin="10dp"/>
+
+                                <LinearLayout
+                                    android:id="@+id/userResponsibilitiesArrowContainer"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="end">
+
+                                    <ImageButton
+                                        android:id="@+id/userResponsibilitiesArrow"
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:src="@drawable/down_arrow_btn"
+                                        android:backgroundTint="@android:color/transparent"
+                                        android:background="@android:color/transparent"
+                                        android:scaleType="fitCenter"
+                                        android:layout_marginEnd="10dp"/>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/userResponsibilitiesDescription"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="15dp"
+                                android:layout_marginEnd="25dp"
+                                android:layout_marginBottom="5dp"
+                                android:text=" • You must provide accurate information during registration.\n • You agree not to misuse servant contact details for any illegal or harmful activity. \n • You must not share or resell contact information to third parties."
+                                android:textSize="16sp"
+                                android:textColor="@color/colorTextPrimary"
+                                android:visibility="gone"/>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/profileAccessCard"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        app:cardBackgroundColor="@color/colorSurface"
+                        app:cardCornerRadius="10dp"
+                        android:elevation="6dp">
+
+                        <LinearLayout
+                            android:id="@+id/profileAccessContainer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <LinearLayout
+                                android:id="@+id/profileAccessHeader"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical">
+
+                                <TextView
+                                    android:id="@+id/profileAccessText"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Profile Viewing &amp; Access"
+                                    android:textStyle="bold"
+                                    android:textSize="16sp"
+                                    android:textColor="@color/colorTextPrimary"
+                                    android:layout_margin="10dp"/>
+
+                                <LinearLayout
+                                    android:id="@+id/profileAccessArrowContainer"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="end">
+
+                                    <ImageButton
+                                        android:id="@+id/profileAccessArrow"
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:src="@drawable/down_arrow_btn"
+                                        android:backgroundTint="@android:color/transparent"
+                                        android:background="@android:color/transparent"
+                                        android:scaleType="fitCenter"
+                                        android:layout_marginEnd="10dp"/>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/profileAccessDescription"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="15dp"
+                                android:layout_marginEnd="25dp"
+                                android:layout_marginBottom="5dp"
+                                android:text=" • You can view servant profiles freely. \n • To access contact details, a one-time payment is required per profile. \n • Access is non-refundable even if the servant is unresponsive or unavailable. "
+                                android:textSize="16sp"
+                                android:textColor="@color/colorTextPrimary"
+                                android:visibility="gone"/>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/paymentPolicyCard"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        app:cardBackgroundColor="@color/colorSurface"
+                        app:cardCornerRadius="10dp"
+                        android:elevation="6dp">
+
+                        <LinearLayout
+                            android:id="@+id/paymentPolicyContainer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <LinearLayout
+                                android:id="@+id/paymentPolicyHeader"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical">
+
+                                <TextView
+                                    android:id="@+id/paymentPolicyText"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Payment Policy"
+                                    android:textStyle="bold"
+                                    android:textSize="16sp"
+                                    android:textColor="@color/colorTextPrimary"
+                                    android:layout_margin="10dp"/>
+
+                                <LinearLayout
+                                    android:id="@+id/paymentPolicyArrowContainer"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="end">
+
+                                    <ImageButton
+                                        android:id="@+id/paymentPolicyArrow"
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:src="@drawable/down_arrow_btn"
+                                        android:backgroundTint="@android:color/transparent"
+                                        android:background="@android:color/transparent"
+                                        android:scaleType="fitCenter"
+                                        android:layout_marginEnd="10dp"/>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/paymentPolicyDescription"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="15dp"
+                                android:layout_marginEnd="25dp"
+                                android:layout_marginBottom="5dp"
+                                android:text=" • All payments are final and non-refundable. \n • ₹20 is charged per profile unlock. \n • Payments are processed securely via Razorpay. "
+                                android:textSize="16sp"
+                                android:textColor="@color/colorTextPrimary"
+                                android:visibility="gone"/>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/privacyPolicyCard"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        app:cardBackgroundColor="@color/colorSurface"
+                        app:cardCornerRadius="10dp"
+                        android:elevation="6dp">
+
+                        <LinearLayout
+                            android:id="@+id/privacyPolicyContainer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <LinearLayout
+                                android:id="@+id/privacyPolicyHeader"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical">
+
+                                <TextView
+                                    android:id="@+id/privacyPolicyText"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Privacy"
+                                    android:textStyle="bold"
+                                    android:textSize="16sp"
+                                    android:textColor="@color/colorTextPrimary"
+                                    android:layout_margin="10dp"/>
+
+                                <LinearLayout
+                                    android:id="@+id/privacyPolicyArrowContainer"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="end">
+
+                                    <ImageButton
+                                        android:id="@+id/privacyPolicyArrow"
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:src="@drawable/down_arrow_btn"
+                                        android:backgroundTint="@android:color/transparent"
+                                        android:background="@android:color/transparent"
+                                        android:scaleType="fitCenter"
+                                        android:layout_marginEnd="10dp"/>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/privacyPolicyDescription"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="15dp"
+                                android:layout_marginEnd="25dp"
+                                android:layout_marginBottom="5dp"
+                                android:text=" • Your contact details are not shared with servants unless you share them yourself. \n • You must not screenshot or share servant details publicly. "
+                                android:textSize="16sp"
+                                android:textColor="@color/colorTextPrimary"
+                                android:visibility="gone"/>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/misuseBanCard"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        app:cardBackgroundColor="@color/colorSurface"
+                        app:cardCornerRadius="10dp"
+                        android:elevation="6dp">
+
+                        <LinearLayout
+                            android:id="@+id/misuseBanContainer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <LinearLayout
+                                android:id="@+id/misuseBanHeader"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical">
+
+                                <TextView
+                                    android:id="@+id/misuseBanText"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Misuse &amp; Ban Policy"
+                                    android:textStyle="bold"
+                                    android:textSize="16sp"
+                                    android:textColor="@color/colorTextPrimary"
+                                    android:layout_margin="10dp"/>
+
+                                <LinearLayout
+                                    android:id="@+id/misuseBanArrowContainer"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="end">
+
+                                    <ImageButton
+                                        android:id="@+id/misuseBanArrow"
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:src="@drawable/down_arrow_btn"
+                                        android:backgroundTint="@android:color/transparent"
+                                        android:background="@android:color/transparent"
+                                        android:scaleType="fitCenter"
+                                        android:layout_marginEnd="10dp"/>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/misuseBanDescription"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="15dp"
+                                android:layout_marginEnd="25dp"
+                                android:layout_marginBottom="5dp"
+                                android:text=" • Any misuse of contact data can result in permanent account ban. \n • Harassment, spam, or abusive behavior is strictly prohibited. "
+                                android:textSize="16sp"
+                                android:textColor="@color/colorTextPrimary"
+                                android:visibility="gone"/>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/termsChangesCard"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        app:cardBackgroundColor="@color/colorSurface"
+                        app:cardCornerRadius="10dp"
+                        android:elevation="6dp">
+
+                        <LinearLayout
+                            android:id="@+id/termsChangesContainer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <LinearLayout
+                                android:id="@+id/termsChangesHeader"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical">
+
+                                <TextView
+                                    android:id="@+id/termsChangesText"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Changes to Terms"
+                                    android:textStyle="bold"
+                                    android:textSize="16sp"
+                                    android:textColor="@color/colorTextPrimary"
+                                    android:layout_margin="10dp"/>
+
+                                <LinearLayout
+                                    android:id="@+id/termsChangesArrowContainer"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="end">
+
+                                    <ImageButton
+                                        android:id="@+id/termsChangesArrow"
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:src="@drawable/down_arrow_btn"
+                                        android:backgroundTint="@android:color/transparent"
+                                        android:background="@android:color/transparent"
+                                        android:scaleType="fitCenter"
+                                        android:layout_marginEnd="10dp"/>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/termsChangesDescription"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="15dp"
+                                android:layout_marginEnd="25dp"
+                                android:layout_marginBottom="5dp"
+                                android:text="We may update our terms anytime. You’ll be notified via app or email."
+                                android:textSize="16sp"
+                                android:textColor="@color/colorTextPrimary"
+                                android:visibility="gone"/>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/legalQueriesCard"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        app:cardBackgroundColor="@color/colorSurface"
+                        app:cardCornerRadius="10dp"
+                        android:elevation="6dp">
+
+                        <LinearLayout
+                            android:id="@+id/legalQueriesContainer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <LinearLayout
+                                android:id="@+id/legalQueriesHeader"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical">
+
+                                <TextView
+                                    android:id="@+id/legalQueriesText"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Contact for Legal Queries"
+                                    android:textStyle="bold"
+                                    android:textSize="16sp"
+                                    android:textColor="@color/colorTextPrimary"
+                                    android:layout_margin="10dp"/>
+
+                                <LinearLayout
+                                    android:id="@+id/legalQueriesArrowContainer"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="end">
+
+                                    <ImageButton
+                                        android:id="@+id/legalQueriesArrow"
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:src="@drawable/down_arrow_btn"
+                                        android:backgroundTint="@android:color/transparent"
+                                        android:background="@android:color/transparent"
+                                        android:scaleType="fitCenter"
+                                        android:layout_marginEnd="10dp"/>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/legalQueriesDescription"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="15dp"
+                                android:layout_marginEnd="25dp"
+                                android:layout_marginBottom="5dp"
+                                android:text=" Email: hireeasy1@gmail.com"
+                                android:textSize="16sp"
+                                android:textColor="@color/colorTextPrimary"
+                                android:visibility="gone"/>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <View
+                        android:id="@+id/termsConditionsSpacer"
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:background="@android:color/transparent"/>
+
+                </LinearLayout>
+
+            </ScrollView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Floating Action Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/fabQuickHelp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="60dp"
+        android:drawableLeft="@drawable/urgent_btn"
+        app:cornerRadius="10dp"
+        android:text="Emergency!"
+        android:textStyle="bold"
+        app:backgroundTint="@color/buttonDangerBg"
+        android:textColor="@color/buttonDangerText"
+        android:visibility="visible"/>
+
+    <!-- Bottom Navigation Bar -->
+    <LinearLayout
+        android:id="@+id/bottomNavBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:background="@color/colorSurface"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:paddingBottom="5dp">
+        <LinearLayout
+            android:id="@+id/homeSectionSwitch"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:orientation="vertical">
+            <ImageButton
+                android:id="@+id/homeSectionButton"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/active_button_background"
+                android:contentDescription="Register Section"
+                android:padding="5dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/home_icon_active"/>
+            <TextView
+                android:id="@+id/homeSectionText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Home"
+                android:textColor="@color/colorTextPrimary"
+                android:textSize="13sp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/unlockSectionSwitch"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:orientation="vertical">
+            <ImageButton
+                android:id="@+id/unlockSectionButton"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@android:color/transparent"
+                android:contentDescription="Unlock Profiles Section"
+                android:padding="5dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/unlocked_profiles"/>
+            <TextView
+                android:id="@+id/unlockSectionText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Unlocked"
+                android:textColor="@color/colorTextPrimary"
+                android:textSize="13sp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/searchSectionSwitch"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:orientation="vertical">
+            <ImageButton
+                android:id="@+id/searchSectionButton"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@android:color/transparent"
+                android:contentDescription="Search Section"
+                android:padding="5dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/search_icon"/>
+            <TextView
+                android:id="@+id/searchSectionText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Search"
+                android:textColor="@color/colorTextPrimary"
+                android:textSize="13sp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/membershipButtonSwitch"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:orientation="vertical">
+            <ImageButton
+                android:id="@+id/membershipSectionButton"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@android:color/transparent"
+                android:contentDescription="Logout"
+                android:padding="5dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/membership_icon"/>
+            <TextView
+                android:id="@+id/membershipSectionText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Membership"
+                android:textColor="@color/colorTextPrimary"
+                android:textSize="13sp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/profileSectionSwitch"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:orientation="vertical">
+            <ImageButton
+                android:id="@+id/profileSectionButton"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@android:color/transparent"
+                android:contentDescription="Search Section"
+                android:padding="5dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/profiles"/>
+            <TextView
+                android:id="@+id/profileSectionText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Profile"
+                android:textColor="@color/colorTextPrimary"
+                android:textSize="13sp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

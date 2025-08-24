@@ -1,0 +1,520 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/main_page_background"
+    android:fitsSystemWindows="false">
+
+    <!-- NAVBAR -->
+    <LinearLayout
+        android:id="@+id/navbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/navbar_background"
+        android:orientation="horizontal"
+        android:padding="15dp"
+        android:elevation="6dp"
+        android:gravity="center_vertical"
+        android:backgroundTintMode="src_over"
+        android:baselineAligned="false">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/logo"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/app_logo"
+            android:layout_gravity="center_vertical"
+            android:contentDescription="HireEasy Logo"
+            android:elevation="4dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="HireEasy"
+            android:textColor="@color/colorTextInverse"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:layout_marginStart="12dp"
+            android:layout_gravity="center_vertical"
+            android:fontFamily="sans-serif-condensed" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/login_button"
+            android:text="Login"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:background="@drawable/login_button_background"
+            android:textColor="@color/colorTextInverse"
+            android:elevation="4dp"/>
+
+    </LinearLayout>
+
+    <!-- SCROLLABLE CONTENT -->
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/navbar"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="20dp">
+
+            <!-- CAROUSEL -->
+            <RelativeLayout
+                android:id="@+id/carousel_container"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_margin="12dp"
+                android:elevation="5dp">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/carousel_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/carousel1"
+                    android:padding="8dp"
+                    app:shapeAppearanceOverlay="@style/RoundedImageView"
+                    android:contentDescription="Carousel image" />
+
+            </RelativeLayout>
+
+            <!-- GET STARTED BUTTON -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/get_started_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Get Started"
+                style="@style/Widget.MaterialComponents.Button"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:paddingLeft="25dp"
+                android:paddingRight="25dp"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp"
+                android:textSize="16sp"
+                android:fontFamily="sans-serif-medium"
+                android:textStyle="bold"
+                android:backgroundTint="@color/buttonAccentBg"
+                android:textColor="@color/buttonAccentText"
+                app:cornerRadius="10dp"
+                android:elevation="8dp"
+                android:translationZ="8dp"
+                app:rippleColor="@color/colorRipple"/>
+
+
+
+            <!-- FEATURES TITLE -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Why Choose HireEasy?"
+                android:textColor="@color/colorTextPrimary"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:layout_margin="15dp"
+                android:fontFamily="sans-serif-condensed" />
+
+            <!-- FEATURES LIST -->
+            <LinearLayout
+                android:id="@+id/features_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="12dp">
+
+                <!-- FEATURES ROW 1 -->
+                <LinearLayout
+                    android:id="@+id/feature_row_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    android:layout_marginBottom="12dp">
+
+                    <!-- CARD: Easy Hiring Process -->
+                    <LinearLayout
+                        android:id="@+id/card_1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:padding="18dp"
+                        android:layout_marginEnd="6dp"
+                        android:background="@drawable/card_background"
+                        android:elevation="8dp"
+                        android:gravity="center"
+                        android:minHeight="200dp">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/easy_process"
+                            android:layout_gravity="center" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Easy Hiring Process"
+                            android:textColor="@color/colorTextPrimary"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Search, filter, and hire domestic help with just a few taps — no complicated steps!"
+                            android:textColor="@color/colorTextPrimary"
+                            android:textSize="14sp"
+                            android:gravity="center"
+                            android:layout_marginTop="6dp" />
+                    </LinearLayout>
+
+                    <!-- CARD: Verified Candidates -->
+                    <LinearLayout
+                        android:id="@+id/card_2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:padding="18dp"
+                        android:layout_marginStart="6dp"
+                        android:background="@drawable/card_background"
+                        android:elevation="8dp"
+                        android:gravity="center"
+                        android:minHeight="200dp">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/verified_profiles"
+                            android:layout_gravity="center" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Verified Profiles"
+                            android:textColor="@color/colorTextPrimary"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Each servant’s identity is authenticated by agents using Aadhaar and manual checks."
+                            android:textColor="@color/colorTextPrimary"
+                            android:textSize="14sp"
+                            android:gravity="center"
+                            android:layout_marginTop="6dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- FEATURES ROW 2 -->
+                <LinearLayout
+                    android:id="@+id/feature_row_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    android:layout_marginBottom="12dp">
+
+                    <!-- CARD: Affordable Profile Access -->
+                    <LinearLayout
+                        android:id="@+id/card_3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:padding="18dp"
+                        android:layout_marginEnd="6dp"
+                        android:background="@drawable/card_background"
+                        android:elevation="8dp"
+                        android:gravity="center"
+                        android:minHeight="200dp">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/paid_access"
+                            android:layout_gravity="center" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="₹20 to View Details"
+                            android:textColor="@color/colorTextPrimary"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Basic profiles are free to browse. Unlock full details and contact info for just ₹20!"
+                            android:textColor="@color/colorTextPrimary"
+                            android:textSize="14sp"
+                            android:gravity="center"
+                            android:layout_marginTop="6dp" />
+                    </LinearLayout>
+
+                    <!-- CARD: Agent-Backed Management -->
+                    <LinearLayout
+                        android:id="@+id/card_4"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:padding="18dp"
+                        android:layout_marginStart="6dp"
+                        android:background="@drawable/card_background"
+                        android:elevation="8dp"
+                        android:gravity="center"
+                        android:minHeight="200dp">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/verified_agents"
+                            android:layout_gravity="center" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Agent-Based Reliability"
+                            android:textColor="@color/colorTextPrimary"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Each candidate is added by verified agents who manage availability and updates."
+                            android:textColor="@color/colorTextPrimary"
+                            android:textSize="14sp"
+                            android:gravity="center"
+                            android:layout_marginTop="6dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- FEATURES ROW 3 -->
+                <LinearLayout
+                    android:id="@+id/feature_row_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    android:layout_marginBottom="12dp">
+
+                    <!-- CARD: Filter & Sort Options -->
+                    <LinearLayout
+                        android:id="@+id/card_5"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:padding="18dp"
+                        android:layout_marginEnd="6dp"
+                        android:background="@drawable/card_background"
+                        android:elevation="8dp"
+                        android:gravity="center"
+                        android:minHeight="200dp">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/filter"
+                            android:layout_gravity="center" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Smart Filtering Options"
+                            android:textColor="@color/colorTextPrimary"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Filter by job role, location, gender, and experience to find the best match fast."
+                            android:textColor="@color/colorTextPrimary"
+                            android:textSize="14sp"
+                            android:gravity="center"
+                            android:layout_marginTop="6dp" />
+                    </LinearLayout>
+
+                    <!-- CARD: Feedback & Reviews -->
+                    <LinearLayout
+                        android:id="@+id/card_6"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:padding="18dp"
+                        android:layout_marginStart="6dp"
+                        android:background="@drawable/card_background"
+                        android:elevation="8dp"
+                        android:gravity="center"
+                        android:minHeight="200dp">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/feedback"
+                            android:layout_gravity="center" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Real User Feedback"
+                            android:textColor="@color/colorTextPrimary"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="View honest reviews and experiences from previous employers before you hire."
+                            android:textColor="@color/colorTextPrimary"
+                            android:textSize="14sp"
+                            android:gravity="center"
+                            android:layout_marginTop="6dp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- FEEDBACK SECTION -->
+            <LinearLayout
+                android:id="@+id/feedback_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorSurface"
+                android:orientation="vertical"
+                android:padding="24dp"
+                android:elevation="6dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Share Your Feedback"
+                    android:textColor="@color/colorTextPrimary"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:layout_gravity="center" />
+
+                <EditText
+                    android:id="@+id/feedback_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter your email"
+                    android:textColor="@color/colorTextPrimary"
+                    android:textColorHint="@color/colorTextSecondary"
+                    android:background="@drawable/feedback_input"
+                    android:layout_marginTop="12dp"
+                    android:padding="12dp"
+                    android:inputType="textEmailAddress" />
+
+                <EditText
+                    android:id="@+id/feedback_message"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter your feedback"
+                    android:textColor="@color/colorTextPrimary"
+                    android:textColorHint="@color/colorTextSecondary"
+                    android:background="@drawable/feedback_input"
+                    android:layout_marginTop="12dp"
+                    android:padding="12dp"
+                    android:minHeight="100dp"
+                    android:gravity="top"
+                    android:inputType="textMultiLine" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/submit_feedback_button"
+                    android:layout_width="wrap_content"
+                    style="@style/Widget.MaterialComponents.Button"
+                    android:layout_height="wrap_content"
+                    android:text="Submit Feedback"
+                    app:cornerRadius="10dp"
+                    android:backgroundTint="@color/buttonPrimaryBg"
+                    android:textColor="@color/buttonPrimaryText"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="12dp"
+                    android:elevation="4dp"/>
+
+            </LinearLayout>
+
+            <!-- CONTACT US SECTION -->
+            <LinearLayout
+                android:id="@+id/contact_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorSurface"
+                android:orientation="vertical"
+                android:padding="24dp"
+                android:elevation="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Contact Us"
+                    android:textColor="@color/colorTextPrimary"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:layout_gravity="center" />
+
+                <Button
+                    android:id="@+id/gmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="hireeasy@gmail.com"
+                    android:textColor="@color/colorTextSecondary"
+                    android:textSize="16sp"
+                    android:backgroundTint="@android:color/transparent"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp" />
+
+                <Button
+                    android:id="@+id/phoneDial"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Emergency Number"
+                    android:textColor="@color/colorTextSecondary"
+                    android:textSize="16sp"
+                    android:backgroundTint="@android:color/transparent"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

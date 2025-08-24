@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- ========= Required Permissions ========= -->
+
+    <!-- Network and Internet -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <!-- Camera and Media Access -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" tools:ignore="ScopedStorage" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28" tools:ignore="ScopedStorage" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" /> <!-- For Android 13+ -->
+
+    <!-- Phone and Call Functionality -->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <!-- Bluetooth (for Android 12+) -->
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+
+    <!-- ========= Optional Features (Device Capabilities) ========= -->
+
+    <uses-feature android:name="android.hardware.camera" android:required="false" />
+    <uses-feature android:name="android.hardware.telephony" android:required="false" />
+
+    <!-- ========= Application Section ========= -->
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.HireEasyUser">
+
+        <!-- Splash / Launcher Activity -->
+        <activity
+            android:name=".WaveSplashActivity"
+            android:exported="true"
+            android:theme="@style/Theme.HireEasy.NoActionBar.FullScreen"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Main Entry -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:theme="@style/Theme.HireEasy.NoActionBar.FullScreen"
+            android:screenOrientation="portrait" />
+
+        <!-- User Section -->
+        <activity
+            android:name=".UserLoginMain"
+            android:exported="false"
+            android:theme="@style/Theme.HireEasy.NoActionBar.FullScreen"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UserRegistration"
+            android:exported="false"
+            android:theme="@style/Theme.HireEasy.NoActionBar.FullScreen"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UserDashboard"
+            android:exported="false"
+            android:theme="@style/Theme.HireEasy.NoActionBar.FullScreen"
+            android:screenOrientation="portrait" />
+
+        <!-- Servant & Payment Section -->
+        <activity
+            android:name=".ServantProfile"
+            android:exported="false"
+            android:theme="@style/Theme.HireEasy.NoActionBar.FullScreen"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PaymentPortal"
+            android:exported="false"
+            android:theme="@style/Theme.HireEasy.NoActionBar.FullScreen"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PrimePaymentPortal"
+            android:exported="false"
+            android:theme="@style/Theme.HireEasy.NoActionBar.FullScreen"
+            android:screenOrientation="portrait" />
+
+    </application>
+</manifest>

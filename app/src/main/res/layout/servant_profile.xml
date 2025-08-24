@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_servant_profile"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/main_page_background">
+
+    <!-- Top Navigation Bar -->
+    <LinearLayout
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:layout_marginTop="15dp"
+        android:gravity="center_vertical">
+
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/back_btn"
+            android:scaleType="centerInside"
+            android:contentDescription="Back" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Servant Profile"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="@color/colorTextPrimary" />
+    </LinearLayout>
+
+    <!-- Profile Card -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_profile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:elevation="8dp"
+        app:cardCornerRadius="16dp">
+
+        <LinearLayout
+            android:id="@+id/layout_card_inner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:background="@drawable/card_gradient_background">
+
+            <!-- Aadhar Verified -->
+            <LinearLayout
+                android:id="@+id/layout_verified"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp">
+
+                <ImageView
+                    android:id="@+id/img_verified"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/verified"
+                    android:contentDescription="Verified Badge" />
+
+                <TextView
+                    android:id="@+id/tv_verified"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Verified through Aadhar"
+                    android:textSize="14sp"
+                    android:textColor="@color/colorSuccess"
+                    android:layout_marginStart="6dp" />
+            </LinearLayout>
+
+            <!-- ID and Profile Image -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/layout_servant_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_servant_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="S5656"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorPrimaryDark" />
+
+                    <!-- Name -->
+                    <LinearLayout
+                        android:id="@+id/layout_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="10dp">
+
+                        <TextView
+                            android:id="@+id/tv_name_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Name: "
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorTextPrimary" />
+
+                        <TextView
+                            android:id="@+id/tv_name_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="John Doe"
+                            android:textSize="16sp"
+                            android:textColor="@color/colorTextPrimary" />
+                    </LinearLayout>
+
+                    <!-- Category -->
+                    <LinearLayout
+                        android:id="@+id/layout_category"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="10dp">
+
+                        <TextView
+                            android:id="@+id/tv_category_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Category: "
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorTextPrimary" />
+
+                        <TextView
+                            android:id="@+id/tv_category_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Maid"
+                            android:textSize="16sp"
+                            android:textColor="@color/colorTextPrimary" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/img_profile"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/default_profile"
+                    android:layout_gravity="end|center_vertical"
+                    android:layout_marginEnd="8dp"
+                    android:elevation="4dp"
+                    android:contentDescription="Profile Picture" />
+            </FrameLayout>
+
+            <!-- Area -->
+            <LinearLayout
+                android:id="@+id/layout_area"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/tv_area_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Area: "
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorTextPrimary" />
+
+                <TextView
+                    android:id="@+id/tv_area_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Gopal Nagar"
+                    android:textSize="16sp"
+                    android:textColor="@color/colorTextPrimary" />
+            </LinearLayout>
+
+            <!-- Gender -->
+            <LinearLayout
+                android:id="@+id/layout_gender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/tv_gender_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Gender: "
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorTextPrimary" />
+
+                <TextView
+                    android:id="@+id/tv_gender_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Male"
+                    android:textSize="16sp"
+                    android:textColor="@color/colorTextPrimary" />
+            </LinearLayout>
+
+            <!-- Experience -->
+            <LinearLayout
+                android:id="@+id/layout_experience"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/tv_experience_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Experience: "
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorTextPrimary" />
+
+                <TextView
+                    android:id="@+id/tv_experience_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2 Years"
+                    android:textSize="16sp"
+                    android:textColor="@color/colorTextPrimary" />
+            </LinearLayout>
+
+            <!-- Salary -->
+            <LinearLayout
+                android:id="@+id/layout_salary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/tv_salary_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Expected Salary: "
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorTextPrimary" />
+
+                <TextView
+                    android:id="@+id/tv_salary_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rs. 1000"
+                    android:textSize="16sp"
+                    android:textColor="@color/colorTextPrimary" />
+            </LinearLayout>
+
+            <!-- Urgent Charge -->
+            <LinearLayout
+                android:id="@+id/layout_urgent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/tv_urgent_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Urgent Charge: "
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorTextPrimary" />
+
+                <TextView
+                    android:id="@+id/tv_urgent_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rs. 500"
+                    android:textSize="16sp"
+                    android:textColor="@color/colorTextPrimary" />
+            </LinearLayout>
+
+            <!-- Mobile Number -->
+            <LinearLayout
+                android:id="@+id/layout_mobile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/tv_mobile_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mobile: "
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorTextPrimary" />
+
+                <TextView
+                    android:id="@+id/tv_mobile_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="9876543210"
+                    android:textSize="16sp"
+                    android:textColor="@color/colorTextPrimary" />
+            </LinearLayout>
+
+            <!-- Availability Chip -->
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_available"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Available"
+                android:textSize="14sp"
+                android:textColor="@color/colorSuccess"
+                android:layout_marginTop="10dp" />
+
+            <!-- Rating Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_give_rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Give Rating"
+                android:textColor="@color/colorTextInverse"
+                android:backgroundTint="@color/buttonAccentBg"
+                app:cornerRadius="10dp"
+                android:layout_marginTop="10dp" />
+
+            <!-- Swipe Instruction -->
+            <TextView
+                android:id="@+id/tv_swipe_hint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Swipe to call/whatsapp "
+                android:textColor="@android:color/darker_gray"
+                android:textSize="14sp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Ratings & Reviews Header -->
+    <TextView
+        android:id="@+id/tv_rating_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rating &amp; Reviews"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorTextPrimary"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp" />
+
+    <!-- RecyclerView for Reviews -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_ratings"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_margin="15dp"
+        android:clipToPadding="false"
+        android:scrollbars="vertical" />
+
+</LinearLayout>

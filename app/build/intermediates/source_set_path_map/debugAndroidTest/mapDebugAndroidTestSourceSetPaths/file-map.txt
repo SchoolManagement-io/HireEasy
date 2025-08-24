@@ -1,0 +1,6 @@
+com.allenhouse.hireeasyuser.test.app-core-1.5.0-0 C:\Users\shukl\.gradle\caches\8.13\transforms\c42a1223dafa17e53988dc34b3f6ae2b\transformed\core-1.5.0\res
+com.allenhouse.hireeasyuser.test.app-annotation-experimental-1.3.0-1 C:\Users\shukl\.gradle\caches\8.13\transforms\d88ddb5bcd36696c1144212fa1e68b54\transformed\annotation-experimental-1.3.0\res
+com.allenhouse.hireeasyuser.test.app-androidTest-2 C:\Users\shukl\AndroidStudioProjects\HireEasyUser\app\build\generated\res\resValues\androidTest\debug
+com.allenhouse.hireeasyuser.test.app-mergeDebugAndroidTestResources-3 C:\Users\shukl\AndroidStudioProjects\HireEasyUser\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
+com.allenhouse.hireeasyuser.test.app-mergeDebugAndroidTestResources-4 C:\Users\shukl\AndroidStudioProjects\HireEasyUser\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
+com.allenhouse.hireeasyuser.test.app-debugAndroidTest-5 C:\Users\shukl\AndroidStudioProjects\HireEasyUser\app\build\intermediates\merged_res\debugAndroidTest\mergeDebugAndroidTestResources

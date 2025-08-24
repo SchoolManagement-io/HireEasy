@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/formScroll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    android:scrollbars="none"
+    android:overScrollMode="never"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:padding="15dp">
+
+        <!-- Header -->
+        <TextView
+            android:id="@+id/appname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="HIRE EASY"
+            android:textSize="23sp"
+            android:textStyle="bold"
+            android:layout_marginTop="50dp"
+            android:textColor="@color/colorTextInverse"
+            android:gravity="center"
+            android:fontFamily="@font/poppins_bolditalic"/>
+
+        <!-- Tagline -->
+        <TextView
+            android:id="@+id/tagline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Where Work Meets Workers"
+            android:textColor="@color/colorTextInverse"
+            android:textSize="18sp"
+            app:fontFamily="@font/poppins_mediumitalic"/>
+
+        <!-- Secure Text -->
+        <TextView
+            android:id="@+id/secure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="Secure Registration for Users"
+            android:textColor="@color/colorTextInverse"
+            android:textSize="15sp"
+            android:fontFamily="@font/poppins_regular"/>
+
+        <!--  Card  -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/card_background">
+
+            <!--  Top Row: Name + Mobile + Image  -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <!--  Name + Mobile  -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/tvName"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginBottom="16dp"
+                        android:hint="Name"
+                        android:background="@drawable/rounded_edittext"
+                        android:inputType="textPersonName"
+                        android:textColorHint="@color/colorTextSecondary"
+                        android:textColor="@color/colorTextPrimary"
+                        android:padding="12dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:background="@drawable/rounded_edittext">
+
+                        <EditText
+                            android:id="@+id/mobile"
+                            android:layout_width="0dp"
+                            android:layout_height="48dp"
+                            android:layout_weight="1"
+                            android:hint="Mobile Number"
+                            android:inputType="phone"
+                            android:maxLength="10"
+                            android:padding="12dp"
+                            android:background="@null"
+                            android:textColorHint="@color/colorTextSecondary"
+                            android:textColor="@color/colorTextPrimary"/>
+
+                        <ImageView
+                            android:id="@+id/mobile_verified_icon"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/check"
+                            android:visibility="gone"
+                            android:scaleType="fitCenter"
+                            android:layout_marginEnd="10dp"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!--  Profile Image  -->
+                <FrameLayout
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center">
+
+                    <ImageView
+                        android:id="@+id/profile_picture"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:clipToOutline="true"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/default_profile"/>
+
+                    <ImageButton
+                        android:id="@+id/btn_edit_image"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_gravity="bottom|end"
+                        android:layout_margin="4dp"
+                        android:src="@drawable/camera"
+                        android:padding="5dp"
+                        android:scaleType="fitCenter"
+                        android:background="@drawable/card_background"/>
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <!--  Aadhaar  -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@drawable/rounded_edittext">
+
+                <EditText
+                    android:id="@+id/aadhar_number"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:hint="Aadhaar Number"
+                    android:inputType="number"
+                    android:maxLength="12"
+                    android:padding="12dp"
+                    android:background="@null"
+                    android:textColorHint="@color/colorTextSecondary"
+                    android:textColor="@color/colorTextPrimary"/>
+
+                <LinearLayout
+                    android:id="@+id/aadhaar_verified"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingStart="8dp"
+                    android:layout_marginEnd="10dp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/aadhar_verified_icon"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:contentDescription="Verified"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/check"/>
+
+                    <TextView
+                        android:id="@+id/aadhar_verified_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="4dp"
+                        android:text="Verified"
+                        android:textSize="14sp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--  Gmail  -->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="true"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/rounded_edittext"
+                android:gravity="center_vertical">
+
+                <EditText
+                    android:id="@+id/gmail"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:hint="Enter Gmail"
+                    android:inputType="textEmailAddress"
+                    android:maxLength="40"
+                    android:padding="12dp"
+                    android:background="@null"
+                    android:textColorHint="@color/colorTextSecondary"
+                    android:textColor="@color/colorTextPrimary"/>
+
+                <Button
+                    android:id="@+id/sendOtpBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Send OTP"
+                    android:backgroundTint="@android:color/transparent"
+                    android:textColor="@color/colorTextPrimary"
+                    android:visibility="gone"/>
+
+            </LinearLayout>
+
+            <!--  OTP  -->
+            <TextView
+                android:id="@+id/otpTimer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="OTP Timer"
+                android:visibility="gone"
+                android:textColor="@color/colorPrimary"
+                android:layout_gravity="end"
+                android:layout_marginEnd="10dp"/>
+
+            <LinearLayout
+                android:id="@+id/otpSection"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="true"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/rounded_edittext"
+                android:gravity="center_vertical"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/otp"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:hint="Enter OTP"
+                    android:inputType="number"
+                    android:maxLength="6"
+                    android:padding="12dp"
+                    android:background="@null"
+                    android:textColorHint="@color/colorTextSecondary"
+                    android:textColor="@color/colorTextPrimary"/>
+
+                <Button
+                    android:id="@+id/resendOtpBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Resend"
+                    android:backgroundTint="@android:color/transparent"
+                    android:textColor="@color/statusBusy"
+                    android:visibility="gone"/>
+
+            </LinearLayout>
+
+            <!--  Password  -->
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:hint="Password"
+                android:layout_marginBottom="16dp"
+                android:inputType="textPassword"
+                android:layout_marginTop="6dp"
+                android:padding="12dp"
+                android:background="@drawable/rounded_edittext"
+                android:textColorHint="@color/colorTextSecondary"
+                android:textColor="@color/colorTextPrimary"
+                android:visibility="gone"/>
+
+            <!--  Submit Button  -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/submit_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/buttonPrimaryBg"
+                android:fontFamily="sans-serif-medium"
+                android:text="Register Servant"
+                android:textColor="@color/buttonPrimaryText"
+                android:textSize="16sp"
+                app:cornerRadius="10dp"
+                android:padding="12dp"
+                tools:ignore="HardcodedText"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

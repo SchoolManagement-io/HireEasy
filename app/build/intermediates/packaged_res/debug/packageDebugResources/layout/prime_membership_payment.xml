@@ -1,0 +1,235 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="16dp"
+    android:background="@drawable/main_page_background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/card_background"
+        android:backgroundTint="@android:color/white"
+        android:padding="24dp"
+        android:elevation="12dp"
+        android:layout_margin="12dp"
+        android:layout_gravity="center"
+        android:clipToPadding="false"
+        android:backgroundTintMode="src_in"
+        android:animateLayoutChanges="true"
+        android:layoutDirection="ltr"
+        android:layout_marginHorizontal="16dp">
+
+    <!-- Prime Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:src="@drawable/app_logo" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Prime Membership"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/poppins_bolditalic"
+            android:textColor="@color/colorTextPrimary"
+            android:layout_marginStart="12dp" />
+    </LinearLayout>
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Unlock Prime Membership"
+        android:textSize="20sp"
+        android:textColor="@color/colorTextPrimary"
+        android:textStyle="bold"
+        android:fontFamily="@font/poppins_semiboiditalic"
+        android:layout_marginTop="20dp" />
+
+    <!-- Description -->
+    <TextView
+        android:id="@+id/subText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Get unlimited access to detailed profile of any servant. One-time payment of just ₹499/month."
+        android:textSize="14sp"
+        android:lineSpacingExtra="5dp"
+        android:textColor="@color/colorTextSecondary"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/poppins_regular" />
+
+    <!-- Email -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/mail"
+            android:layout_gravity="center_vertical" />
+
+        <TextView
+            android:id="@+id/userEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" sample@gmail.com"
+            android:textSize="14sp"
+            android:layout_marginStart="8dp"
+            android:textColor="@color/colorTextPrimary" />
+    </LinearLayout>
+
+    <!-- Mobile -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/mobile_num"
+            android:layout_gravity="center_vertical" />
+
+        <TextView
+            android:id="@+id/userMobile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" 9999999999"
+            android:layout_marginStart="8dp"
+            android:textSize="14sp"
+            android:textColor="@color/colorTextPrimary" />
+    </LinearLayout>
+
+    <!-- Redeem Text -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Have a Promo Code?"
+        android:textSize="14sp"
+        android:textColor="@color/colorAccent"
+        android:layout_marginTop="18dp"
+        android:fontFamily="@font/poppins_mediumitalic" />
+
+    <!-- Redeem Code Field -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="6dp"
+        android:weightSum="3"
+        android:gravity="center_vertical">
+
+        <EditText
+            android:id="@+id/editRedeem"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="2"
+            android:background="@drawable/rounded_edittext"
+            android:hint="Enter code"
+            android:padding="12dp"
+            android:textColor="@color/colorTextPrimary"
+            android:textSize="14sp"
+            android:inputType="text" />
+
+        <Button
+            android:id="@+id/btnApply"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:text="Apply"
+            android:textAllCaps="false"
+            android:textColor="@color/colorTextPrimary"
+            android:backgroundTint="@android:color/transparent"
+            android:layout_marginStart="8dp" />
+    </LinearLayout>
+
+    <!-- Amount and Status -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Payable:"
+            android:textSize="16sp"
+            android:textColor="@color/colorTextPrimary"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/payableAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" ₹499"
+            android:textSize="16sp"
+            android:layout_marginStart="8dp"
+            android:textColor="@color/colorSuccess"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/appliedSuccessBtn"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/check"
+            android:background="@android:color/transparent"
+            android:layout_marginStart="10dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/appliedSuccessText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Redeem Applied!"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorSuccess"
+            android:layout_marginStart="6dp"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <!-- Pay Now Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/payAmountBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:padding="14dp"
+        android:text="Upgrade to Prime"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        app:cornerRadius="20dp"
+        android:backgroundTint="@color/colorSuccess" />
+
+    <!-- Footer Note -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="100% Secure &amp; Fast Payment Gateway"
+        android:textSize="12sp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/colorTextSecondary"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center" />
+</LinearLayout>
+    </LinearLayout>

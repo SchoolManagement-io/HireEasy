@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="24dp"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/main_page_background"
+    android:elevation="20dp"
+    android:layout_gravity="center">
+
+    <TextView
+        android:id="@+id/dialog_servant_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Unlock Profile?"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorTextPrimary"
+        android:layout_marginBottom="20dp" />
+
+    <TextView
+        android:id="@+id/dialog_subtext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="To view more details,\n unlock this profile for just ₹20."
+        android:textColor="@color/colorTextSecondary"
+        android:textSize="14sp"
+        android:layout_marginBottom="24dp"
+        android:gravity="center"
+        android:fontFamily="@font/poppins_regular"/>
+
+    <Button
+        android:id="@+id/dialog_unlock_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="🔓 Unlock Profile"
+        android:textAllCaps="false"
+        android:backgroundTint="@color/buttonPrimaryBg"
+        android:textColor="@color/buttonPrimaryText" />
+
+    <Button
+        android:id="@+id/dialog_cancel_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cancel"
+        android:textAllCaps="false"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/colorTextSecondary"
+        android:textColor="@color/colorSurface" />
+</LinearLayout>

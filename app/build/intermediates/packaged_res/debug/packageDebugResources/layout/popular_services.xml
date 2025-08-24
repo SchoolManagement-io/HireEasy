@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mainBackground"
+    android:layout_width="120dp"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:clickable="true"
+    android:focusable="true"
+    app:cardBackgroundColor="@color/colorSurface"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp"
+    app:rippleColor="@color/colorRipple">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="12dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iconService"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/default_service_icon"
+            android:contentDescription="Service Icon"
+            app:civ_border_color="@color/colorTextPrimary"
+            app:civ_border_width="1dp"/>
+
+        <TextView
+            android:id="@+id/textServiceName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/poppins_mediumitalic"
+            android:text="Cleaner"
+            android:textColor="@color/colorTextPrimary"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

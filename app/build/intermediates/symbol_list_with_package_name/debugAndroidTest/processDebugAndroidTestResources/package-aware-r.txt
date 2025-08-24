@@ -1,0 +1,3 @@
+com.allenhouse.hireeasyuser.test
+style WhiteBackgroundDialogTheme
+style WhiteBackgroundTheme
